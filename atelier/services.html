@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — Atelier Studio</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>A</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --color-bg: #FAFAF8;
+      --color-bg-dark: #111111;
+      --color-surface: #F2F1EE;
+      --color-surface-dark: #1A1A1A;
+      --color-ink: #1A1A1A;
+      --color-ink-dark: #F0F0F0;
+      --color-muted: #6B6B6B;
+      --color-muted-dark: #A0A0A0;
+      --color-light: #999999;
+      --color-light-dark: #666666;
+      --color-accent: #C45D3E;
+      --color-line: #E5E4E1;
+      --color-line-dark: #2A2A2A;
+      --color-nav-bg: rgba(250, 250, 248, 0.92);
+      --color-nav-bg-dark: rgba(17, 17, 17, 0.92);
+      --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @variant dark (&:where(.dark, .dark *));
+  </style>
+  <script src="js/main.js"></script>
+</head>
+<body class="font-body text-base leading-relaxed text-ink dark:text-ink-dark bg-bg dark:bg-bg-dark antialiased">
+  <div class="custom-cursor"></div>
+
+  <!-- Navigation -->
+  <nav class="nav fixed top-0 inset-x-0 z-50 h-[4.5rem] flex items-center bg-nav-bg dark:bg-nav-bg-dark backdrop-blur-[20px] backdrop-saturate-[180%] border-b border-line dark:border-line-dark transition-transform duration-300 ease-[var(--ease-out)]">
+    <div class="flex items-center justify-between w-full max-w-[1200px] mx-auto px-6 md:px-12 h-full">
+      <a href="index.html" class="font-heading text-xl font-semibold tracking-[-0.02em]">Atelier<span class="text-accent">.</span></a>
+      <div class="nav-links hidden md:flex items-center gap-8">
+        <a href="index.html" class="nav-link relative text-sm font-medium text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors duration-200">Home</a>
+        <a href="work.html" class="nav-link relative text-sm font-medium text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors duration-200">Work</a>
+        <a href="services.html" class="nav-link active relative text-sm font-medium text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors duration-200">Services</a>
+        <a href="about.html" class="nav-link relative text-sm font-medium text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors duration-200">About</a>
+        <a href="contact.html" class="nav-link relative text-sm font-medium text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors duration-200">Contact</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <button class="theme-toggle flex items-center justify-center w-10 h-10 rounded-full text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark hover:bg-surface dark:hover:bg-surface-dark transition-all duration-200 cursor-pointer" aria-label="Toggle dark mode">
+          <svg class="icon-sun w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="nav-toggle hidden max-md:flex flex-col gap-[5px] p-2 cursor-pointer" aria-label="Toggle menu">
+          <span class="block w-5 h-[1.5px] bg-ink dark:bg-ink-dark transition-all duration-300 ease-[var(--ease-out-expo)] origin-center"></span>
+          <span class="block w-5 h-[1.5px] bg-ink dark:bg-ink-dark transition-all duration-300 ease-[var(--ease-out-expo)] origin-center"></span>
+          <span class="block w-5 h-[1.5px] bg-ink dark:bg-ink-dark transition-all duration-300 ease-[var(--ease-out-expo)] origin-center"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-nav fixed top-[4.5rem] inset-x-0 bottom-0 bg-bg dark:bg-bg-dark z-40 flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-opacity duration-400 ease-[var(--ease-out)] [&.active]:opacity-100 [&.active]:pointer-events-auto">
+    <a href="index.html" class="font-heading text-3xl font-medium hover:text-accent transition-colors duration-200">Home</a>
+    <a href="work.html" class="font-heading text-3xl font-medium hover:text-accent transition-colors duration-200">Work</a>
+    <a href="services.html" class="font-heading text-3xl font-medium hover:text-accent transition-colors duration-200">Services</a>
+    <a href="about.html" class="font-heading text-3xl font-medium hover:text-accent transition-colors duration-200">About</a>
+    <a href="contact.html" class="font-heading text-3xl font-medium hover:text-accent transition-colors duration-200">Contact</a>
+  </div>
+
+  <div class="page-transition">
+    <section class="pt-[calc(4.5rem+6rem)] pb-16">
+      <div class="max-w-[1200px] mx-auto px-6 md:px-12">
+        <span class="font-body text-xs font-semibold tracking-[0.12em] uppercase text-muted dark:text-muted-dark mb-4 block">Services</span>
+        <h1 class="font-heading text-4xl font-medium leading-[1.05] tracking-[-0.03em] mb-4">What we do best</h1>
+        <p class="text-lg text-muted dark:text-muted-dark max-w-[560px] leading-relaxed">We offer a focused set of design services, each delivered with the same level of strategic thinking and craft.</p>
+      </div>
+    </section>
+
+    <!-- Services Detail -->
+    <section class="pb-24 lg:pb-32">
+      <div class="max-w-[1200px] mx-auto px-6 md:px-12">
+        <div class="flex flex-col gap-px bg-line dark:bg-line-dark reveal-stagger">
+          <div class="bg-bg dark:bg-bg-dark p-8 lg:p-12">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-6">
+              <div class="max-w-[640px]">
+                <span class="font-heading text-[2.5rem] font-light text-accent block mb-4">01</span>
+                <h3 class="font-heading text-xl font-medium leading-[1.3] mb-4">Brand Identity</h3>
+                <p class="text-[0.9375rem] text-muted dark:text-muted-dark leading-relaxed">From strategy to execution — we build brand identities that are distinctive, cohesive, and built to last. This includes naming, logo design, visual identity systems, typography, color, and comprehensive brand guidelines.</p>
+              </div>
+              <div>
+                <span class="font-body text-xs font-semibold tracking-[0.12em] uppercase text-muted dark:text-muted-dark mb-2 block">Includes</span>
+                <p class="text-sm text-muted dark:text-muted-dark">Brand Strategy<br>Logo & Wordmark<br>Visual Identity System<br>Brand Guidelines<br>Brand Architecture</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-bg dark:bg-bg-dark p-8 lg:p-12">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-6">
+              <div class="max-w-[640px]">
+                <span class="font-heading text-[2.5rem] font-light text-accent block mb-4">02</span>
+                <h3 class="font-heading text-xl font-medium leading-[1.3] mb-4">Digital Design</h3>
+                <p class="text-[0.9375rem] text-muted dark:text-muted-dark leading-relaxed">Websites, web applications, and digital products designed with obsessive attention to user experience, interaction design, and visual refinement. We design in Framer and Figma, and work closely with development teams.</p>
+              </div>
+              <div>
+                <span class="font-body text-xs font-semibold tracking-[0.12em] uppercase text-muted dark:text-muted-dark mb-2 block">Includes</span>
+                <p class="text-sm text-muted dark:text-muted-dark">Website Design<br>UI/UX Design<br>Design Systems<br>Prototyping<br>Framer Development</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-bg dark:bg-bg-dark p-8 lg:p-12">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-6">
+              <div class="max-w-[640px]">
+                <span class="font-heading text-[2.5rem] font-light text-accent block mb-4">03</span>
+                <h3 class="font-heading text-xl font-medium leading-[1.3] mb-4">Art Direction</h3>
+                <p class="text-[0.9375rem] text-muted dark:text-muted-dark leading-relaxed">We direct the visual narrative of your brand across all touchpoints — from photography and video to packaging and environmental design. Every element is considered, every decision intentional.</p>
+              </div>
+              <div>
+                <span class="font-body text-xs font-semibold tracking-[0.12em] uppercase text-muted dark:text-muted-dark mb-2 block">Includes</span>
+                <p class="text-sm text-muted dark:text-muted-dark">Photography Direction<br>Packaging Design<br>Campaign Visuals<br>Print Design<br>Environmental Graphics</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-[1200px] mx-auto px-6 md:px-12"><div class="h-px bg-line dark:bg-line-dark"></div></div>
+
+    <!-- Process -->
+    <section class="py-24 lg:py-32">
+      <div class="max-w-[1200px] mx-auto px-6 md:px-12">
+        <div class="mb-16 reveal">
+          <span class="font-body text-xs font-semibold tracking-[0.12em] uppercase text-muted dark:text-muted-dark mb-4 block">Our Process</span>
+          <h2 class="font-heading text-3xl font-medium leading-[1.1] tracking-[-0.02em]">How we work</h2>
+        </div>
+        <div class="grid md:grid-cols-4 gap-12 reveal-stagger" style="counter-reset: step;">
+          <div class="process-step relative">
+            <h4 class="font-body text-base font-semibold mb-2">Discover</h4>
+            <p class="text-sm text-muted dark:text-muted-dark leading-relaxed">We begin every engagement with deep research — understanding your business, audience, competitors, and ambitions.</p>
+          </div>
+          <div class="process-step relative">
+            <h4 class="font-body text-base font-semibold mb-2">Define</h4>
+            <p class="text-sm text-muted dark:text-muted-dark leading-relaxed">We synthesize our findings into a clear strategic foundation: positioning, personality, visual direction, and a creative brief.</p>
+          </div>
+          <div class="process-step relative">
+            <h4 class="font-body text-base font-semibold mb-2">Design</h4>
+            <p class="text-sm text-muted dark:text-muted-dark leading-relaxed">This is where strategy becomes tangible. We explore, iterate, and refine — working closely with you until every element feels right.</p>
+          </div>
+          <div class="process-step relative">
+            <h4 class="font-body text-base font-semibold mb-2">Deliver</h4>
+            <p class="text-sm text-muted dark:text-muted-dark leading-relaxed">We hand off production-ready assets with detailed documentation, ensuring your team can implement with confidence.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 lg:py-32 bg-surface dark:bg-surface-dark text-center">
+      <div class="max-w-[1200px] mx-auto px-6 md:px-12 reveal">
+        <span class="font-body text-xs font-semibold tracking-[0.12em] uppercase text-muted dark:text-muted-dark mb-4 block">Ready?</span>
+        <h2 class="font-heading text-3xl font-medium leading-[1.1] tracking-[-0.02em] mb-4">Let's build something<br>worth talking about</h2>
+        <p class="text-muted dark:text-muted-dark max-w-[480px] mx-auto mb-8">Tell us about your project. We'll get back to you within 48 hours with our thoughts on how we can help.</p>
+        <a href="contact.html" class="inline-flex items-center gap-2 text-sm font-semibold tracking-[0.04em] px-8 py-3.5 rounded-[4px] bg-ink dark:bg-ink-dark text-bg dark:text-bg-dark hover:bg-accent hover:text-white transition-all duration-400 ease-[var(--ease-out)]">Start a Project <span>→</span></a>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-line dark:border-line-dark py-16">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="font-heading text-lg font-semibold">Atelier<span class="text-accent">.</span></div>
+      <div class="flex flex-wrap gap-6">
+        <a href="index.html" class="text-[0.8125rem] text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors duration-200">Home</a>
+        <a href="work.html" class="text-[0.8125rem] text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors duration-200">Work</a>
+        <a href="services.html" class="text-[0.8125rem] text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors duration-200">Services</a>
+        <a href="about.html" class="text-[0.8125rem] text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors duration-200">About</a>
+        <a href="contact.html" class="text-[0.8125rem] text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors duration-200">Contact</a>
+      </div>
+      <span class="text-xs text-light dark:text-light-dark">© 2026 Atelier Studio. All rights reserved.</span>
+    </div>
+  </footer>
+
+</body>
+</html>

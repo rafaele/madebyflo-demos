@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Atelier Studio</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>A</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --color-bg: #FAFAF8;
+      --color-bg-dark: #111111;
+      --color-surface: #F2F1EE;
+      --color-surface-dark: #1A1A1A;
+      --color-ink: #1A1A1A;
+      --color-ink-dark: #F0F0F0;
+      --color-muted: #6B6B6B;
+      --color-muted-dark: #A0A0A0;
+      --color-light: #999999;
+      --color-light-dark: #666666;
+      --color-accent: #C45D3E;
+      --color-line: #E5E4E1;
+      --color-line-dark: #2A2A2A;
+      --color-nav-bg: rgba(250, 250, 248, 0.92);
+      --color-nav-bg-dark: rgba(17, 17, 17, 0.92);
+      --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @variant dark (&:where(.dark, .dark *));
+  </style>
+  <script src="js/main.js"></script>
+</head>
+<body class="font-body text-base leading-relaxed text-ink dark:text-ink-dark bg-bg dark:bg-bg-dark antialiased">
+  <div class="custom-cursor"></div>
+
+  <!-- Navigation -->
+  <nav class="nav fixed top-0 inset-x-0 z-50 h-[4.5rem] flex items-center bg-nav-bg dark:bg-nav-bg-dark backdrop-blur-[20px] backdrop-saturate-[180%] border-b border-line dark:border-line-dark transition-transform duration-300 ease-[var(--ease-out)]">
+    <div class="flex items-center justify-between w-full max-w-[1200px] mx-auto px-6 md:px-12 h-full">
+      <a href="index.html" class="font-heading text-xl font-semibold tracking-[-0.02em]">Atelier<span class="text-accent">.</span></a>
+      <div class="nav-links hidden md:flex items-center gap-8">
+        <a href="index.html" class="nav-link relative text-sm font-medium text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors duration-200">Home</a>
+        <a href="work.html" class="nav-link relative text-sm font-medium text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors duration-200">Work</a>
+        <a href="services.html" class="nav-link relative text-sm font-medium text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors duration-200">Services</a>
+        <a href="about.html" class="nav-link relative text-sm font-medium text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors duration-200">About</a>
+        <a href="contact.html" class="nav-link active relative text-sm font-medium text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors duration-200">Contact</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <button class="theme-toggle flex items-center justify-center w-10 h-10 rounded-full text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark hover:bg-surface dark:hover:bg-surface-dark transition-all duration-200 cursor-pointer" aria-label="Toggle dark mode">
+          <svg class="icon-sun w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="nav-toggle hidden max-md:flex flex-col gap-[5px] p-2 cursor-pointer" aria-label="Toggle menu">
+          <span class="block w-5 h-[1.5px] bg-ink dark:bg-ink-dark transition-all duration-300 ease-[var(--ease-out-expo)] origin-center"></span>
+          <span class="block w-5 h-[1.5px] bg-ink dark:bg-ink-dark transition-all duration-300 ease-[var(--ease-out-expo)] origin-center"></span>
+          <span class="block w-5 h-[1.5px] bg-ink dark:bg-ink-dark transition-all duration-300 ease-[var(--ease-out-expo)] origin-center"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-nav fixed top-[4.5rem] inset-x-0 bottom-0 bg-bg dark:bg-bg-dark z-40 flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-opacity duration-400 ease-[var(--ease-out)] [&.active]:opacity-100 [&.active]:pointer-events-auto">
+    <a href="index.html" class="font-heading text-3xl font-medium hover:text-accent transition-colors duration-200">Home</a>
+    <a href="work.html" class="font-heading text-3xl font-medium hover:text-accent transition-colors duration-200">Work</a>
+    <a href="services.html" class="font-heading text-3xl font-medium hover:text-accent transition-colors duration-200">Services</a>
+    <a href="about.html" class="font-heading text-3xl font-medium hover:text-accent transition-colors duration-200">About</a>
+    <a href="contact.html" class="font-heading text-3xl font-medium hover:text-accent transition-colors duration-200">Contact</a>
+  </div>
+
+  <div class="page-transition">
+    <section class="pt-[calc(4.5rem+6rem)] pb-16">
+      <div class="max-w-[1200px] mx-auto px-6 md:px-12">
+        <span class="font-body text-xs font-semibold tracking-[0.12em] uppercase text-muted dark:text-muted-dark mb-4 block">Contact</span>
+        <h1 class="font-heading text-4xl font-medium leading-[1.05] tracking-[-0.03em] mb-4">Let's talk</h1>
+        <p class="text-lg text-muted dark:text-muted-dark max-w-[560px] leading-relaxed">Have a project in mind? We'd love to hear about it. Fill out the form below or reach out directly — we respond to every inquiry.</p>
+      </div>
+    </section>
+
+    <section class="pb-24 lg:pb-32">
+      <div class="max-w-[1200px] mx-auto px-6 md:px-12">
+        <div class="grid md:grid-cols-2 gap-16">
+          <!-- Form -->
+          <div class="reveal">
+            <form class="contact-form flex flex-col gap-6">
+              <div class="flex flex-col gap-2">
+                <label for="name" class="text-[0.8125rem] font-semibold tracking-[0.04em]">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required class="w-full px-4 py-3 text-[0.9375rem] text-ink dark:text-ink-dark bg-bg dark:bg-bg-dark border-[1.5px] border-line dark:border-line-dark rounded-[4px] outline-none transition-colors duration-200 focus:border-ink dark:focus:border-ink-dark">
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="email" class="text-[0.8125rem] font-semibold tracking-[0.04em]">Email</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required class="w-full px-4 py-3 text-[0.9375rem] text-ink dark:text-ink-dark bg-bg dark:bg-bg-dark border-[1.5px] border-line dark:border-line-dark rounded-[4px] outline-none transition-colors duration-200 focus:border-ink dark:focus:border-ink-dark">
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="project-type" class="text-[0.8125rem] font-semibold tracking-[0.04em]">Project Type</label>
+                <select id="project-type" name="project-type" class="w-full px-4 py-3 text-[0.9375rem] text-ink dark:text-ink-dark bg-bg dark:bg-bg-dark border-[1.5px] border-line dark:border-line-dark rounded-[4px] outline-none transition-colors duration-200 focus:border-ink dark:focus:border-ink-dark">
+                  <option value="" disabled selected>Select a service</option>
+                  <option value="branding">Brand Identity</option>
+                  <option value="digital">Digital Design</option>
+                  <option value="art-direction">Art Direction</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="budget" class="text-[0.8125rem] font-semibold tracking-[0.04em]">Budget Range</label>
+                <select id="budget" name="budget" class="w-full px-4 py-3 text-[0.9375rem] text-ink dark:text-ink-dark bg-bg dark:bg-bg-dark border-[1.5px] border-line dark:border-line-dark rounded-[4px] outline-none transition-colors duration-200 focus:border-ink dark:focus:border-ink-dark">
+                  <option value="" disabled selected>Select a range</option>
+                  <option value="10-25k">$10k – $25k</option>
+                  <option value="25-50k">$25k – $50k</option>
+                  <option value="50-100k">$50k – $100k</option>
+                  <option value="100k+">$100k+</option>
+                </select>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="message" class="text-[0.8125rem] font-semibold tracking-[0.04em]">Tell us about your project</label>
+                <textarea id="message" name="message" placeholder="A brief overview of what you're looking for..." class="w-full px-4 py-3 text-[0.9375rem] text-ink dark:text-ink-dark bg-bg dark:bg-bg-dark border-[1.5px] border-line dark:border-line-dark rounded-[4px] outline-none transition-colors duration-200 focus:border-ink dark:focus:border-ink-dark min-h-[160px] resize-y"></textarea>
+              </div>
+              <button type="submit" class="inline-flex items-center gap-2 text-sm font-semibold tracking-[0.04em] px-8 py-3.5 rounded-[4px] bg-ink dark:bg-ink-dark text-bg dark:text-bg-dark hover:bg-accent hover:text-white transition-all duration-400 ease-[var(--ease-out)] self-start cursor-pointer">Send Message <span>→</span></button>
+            </form>
+          </div>
+
+          <!-- Info -->
+          <div class="reveal">
+            <h3 class="font-heading text-2xl font-medium leading-[1.2] tracking-[-0.02em] mb-8">Get in touch</h3>
+
+            <div class="mb-8">
+              <span class="font-body text-xs font-semibold tracking-[0.12em] uppercase text-muted dark:text-muted-dark mb-2 block">Email</span>
+              <p><a href="mailto:hello@atelierstudio.co" class="text-muted dark:text-muted-dark hover:text-accent transition-colors duration-200">hello@atelierstudio.co</a></p>
+            </div>
+
+            <div class="mb-8">
+              <span class="font-body text-xs font-semibold tracking-[0.12em] uppercase text-muted dark:text-muted-dark mb-2 block">Phone</span>
+              <p><a href="tel:+12125551234" class="text-muted dark:text-muted-dark hover:text-accent transition-colors duration-200">+1 (212) 555-1234</a></p>
+            </div>
+
+            <div class="mb-8">
+              <span class="font-body text-xs font-semibold tracking-[0.12em] uppercase text-muted dark:text-muted-dark mb-2 block">Studio</span>
+              <p class="text-muted dark:text-muted-dark leading-relaxed">142 Wooster Street, 4th Floor<br>New York, NY 10012</p>
+            </div>
+
+            <div class="mb-8">
+              <span class="font-body text-xs font-semibold tracking-[0.12em] uppercase text-muted dark:text-muted-dark mb-2 block">Follow</span>
+              <div class="flex gap-4">
+                <a href="#" class="text-sm font-medium text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors duration-200">Instagram</a>
+                <a href="#" class="text-sm font-medium text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors duration-200">Dribbble</a>
+                <a href="#" class="text-sm font-medium text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors duration-200">LinkedIn</a>
+                <a href="#" class="text-sm font-medium text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors duration-200">Twitter</a>
+              </div>
+            </div>
+
+            <div class="aspect-video bg-surface dark:bg-surface-dark rounded-lg flex items-center justify-center text-sm text-light dark:text-light-dark mt-12">
+              Map Placeholder
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-line dark:border-line-dark py-16">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="font-heading text-lg font-semibold">Atelier<span class="text-accent">.</span></div>
+      <div class="flex flex-wrap gap-6">
+        <a href="index.html" class="text-[0.8125rem] text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors duration-200">Home</a>
+        <a href="work.html" class="text-[0.8125rem] text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors duration-200">Work</a>
+        <a href="services.html" class="text-[0.8125rem] text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors duration-200">Services</a>
+        <a href="about.html" class="text-[0.8125rem] text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors duration-200">About</a>
+        <a href="contact.html" class="text-[0.8125rem] text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors duration-200">Contact</a>
+      </div>
+      <span class="text-xs text-light dark:text-light-dark">© 2026 Atelier Studio. All rights reserved.</span>
+    </div>
+  </footer>
+
+</body>
+</html>

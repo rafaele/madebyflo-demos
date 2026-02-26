@@ -1,0 +1,206 @@
+/* ============================================
+   Nexus — Tailwind v4 Template
+   Custom styles (pseudo-elements, animations,
+   and effects that can't be Tailwind utilities)
+   ============================================ */
+
+/* ---------- Fonts ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap');
+
+/* ---------- Base ---------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+::selection {
+  background: rgba(124, 58, 237, 0.4);
+  color: var(--color-ink);
+}
+
+.dark ::selection {
+  background: rgba(124, 58, 237, 0.4);
+  color: var(--color-ink-dark);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 0.5rem;
+}
+
+/* ---------- Text Gradient ---------- */
+.text-gradient {
+  background: linear-gradient(135deg, #7C3AED, #3B82F6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ---------- Section Label Dot ---------- */
+.section-label::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+/* ---------- Bento Card Spotlight ---------- */
+.bento-card::before {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translate(var(--mouse-x, -50%), var(--mouse-y, -50%));
+}
+
+.dark .bento-card::before {
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.15) 0%, transparent 70%);
+}
+
+.bento-card:hover::before {
+  opacity: 1;
+}
+
+/* ---------- Glow Button ---------- */
+.btn-glow {
+  position: relative;
+  padding: 1px;
+  background: linear-gradient(135deg, #7C3AED, #3B82F6, #F59E0B, #7C3AED);
+  background-size: 300% 300%;
+  animation: gradient-shift 4s ease infinite;
+}
+
+.btn-glow > span {
+  background: var(--color-bg-dark);
+  transition: background 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn-glow:hover > span {
+  background: var(--color-surface-dark);
+}
+
+:root:not(.dark) .btn-glow > span {
+  background: var(--color-bg);
+}
+
+:root:not(.dark) .btn-glow:hover > span {
+  background: var(--color-surface);
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ---------- Hero Background ---------- */
+.hero-bg {
+  background:
+    radial-gradient(ellipse at 30% 20%, rgba(124, 58, 237, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 60%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 90%, rgba(245, 158, 11, 0.06) 0%, transparent 50%);
+}
+
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.3;
+  mix-blend-mode: overlay;
+}
+
+/* ---------- Mockup Gradient Border ---------- */
+.mockup-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 1.25rem;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(124,58,237,0.3), rgba(59,130,246,0.2), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* ---------- CTA Background ---------- */
+.cta-bg {
+  background:
+    radial-gradient(ellipse at 50% 50%, rgba(124, 58, 237, 0.2) 0%, transparent 60%),
+    radial-gradient(ellipse at 20% 80%, rgba(59, 130, 246, 0.12) 0%, transparent 50%);
+}
+
+/* ---------- Hamburger Lines ---------- */
+.nav-hamburger span::before,
+.nav-hamburger span::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  left: 0;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.nav-hamburger span::before { transform: translateY(-6px); }
+.nav-hamburger span::after { transform: translateY(6px); }
+.nav-hamburger.active span { background: transparent; }
+.nav-hamburger.active span::before { transform: rotate(45deg); }
+.nav-hamburger.active span::after { transform: rotate(-45deg); }
+
+/* ---------- Changelog Timeline ---------- */
+.changelog-entry::before {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #7C3AED;
+}
+
+/* ---------- How It Works Connector ---------- */
+@media (min-width: 768px) {
+  .how-steps::before {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: calc(16.67% + 28px);
+    right: calc(16.67% + 28px);
+    height: 1px;
+    background: var(--color-border-dark);
+  }
+
+  :root:not(.dark) .how-steps::before {
+    background: var(--color-border);
+  }
+}
+
+/* ---------- Pulse Dot ---------- */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* ---------- Legal Content ---------- */
+.legal-content ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.legal-content ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}

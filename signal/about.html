@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Signal</title>
+  <meta name="description" content="About Alex Morgan, the writer behind Signal newsletter.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --font-heading: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --color-bg: #FAFAF8;
+      --color-bg-dark: #131313;
+      --color-surface: #F2F0ED;
+      --color-surface-dark: #1C1C1B;
+      --color-ink: #1A1A1A;
+      --color-ink-dark: #EAEAE6;
+      --color-muted: #7A7A72;
+      --color-muted-dark: #8A8A82;
+      --color-accent: #E86C5D;
+      --color-accent-hover: #D45A4C;
+      --color-accent-hover-dark: #F07E70;
+      --color-line: rgba(0, 0, 0, 0.08);
+      --color-line-dark: rgba(255, 255, 255, 0.07);
+      --color-nav-bg: rgba(250, 250, 248, 0.88);
+      --color-nav-bg-dark: rgba(19, 19, 19, 0.88);
+      --color-success: #3DA66D;
+      --font-size-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --font-size-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --font-size-lg: clamp(1.125rem, 1rem + 0.65vw, 1.35rem);
+      --font-size-xl: clamp(1.25rem, 1rem + 1.25vw, 1.75rem);
+      --font-size-2xl: clamp(1.5rem, 1rem + 2.5vw, 2.5rem);
+      --font-size-3xl: clamp(2rem, 1rem + 4vw, 3.75rem);
+      --font-size-4xl: clamp(2.5rem, 1rem + 6vw, 5rem);
+      --font-size-hero: clamp(3rem, 1.5rem + 7vw, 6rem);
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+      --radius-md: 0.75rem;
+      --radius-lg: 1.25rem;
+    }
+    @variant dark (&:where(.dark, .dark *));
+  </style>
+  <script src="js/main.js"></script>
+</head>
+<body class="font-body text-base leading-[1.7] tracking-[-0.01em] text-ink dark:text-ink-dark bg-bg dark:bg-bg-dark antialiased">
+
+  <!-- Navigation -->
+  <nav class="nav fixed top-0 inset-x-0 z-50 h-[4.5rem] flex items-center bg-nav-bg dark:bg-nav-bg-dark backdrop-blur-[16px] backdrop-saturate-[180%] border-b border-line dark:border-line-dark transition-transform duration-300 ease-[var(--ease-out)] [&.nav-hidden]:-translate-y-full">
+    <div class="flex items-center justify-between w-full max-w-[1200px] mx-auto px-[clamp(1.25rem,5vw,3rem)]">
+      <a href="index.html" class="font-heading text-xl tracking-[-0.02em]"><em class="italic text-accent">Signal</em></a>
+      <button class="nav-toggle hidden max-md:flex flex-col justify-center gap-[5px] w-9 h-9 z-[101] cursor-pointer" aria-label="Toggle menu" aria-expanded="false">
+        <span class="block w-[22px] h-[1.5px] bg-ink dark:bg-ink-dark rounded-sm transition-all duration-300 ease-[var(--ease-out)] origin-center"></span>
+        <span class="block w-[22px] h-[1.5px] bg-ink dark:bg-ink-dark rounded-sm transition-all duration-300 ease-[var(--ease-out)] origin-center"></span>
+        <span class="block w-[22px] h-[1.5px] bg-ink dark:bg-ink-dark rounded-sm transition-all duration-300 ease-[var(--ease-out)] origin-center"></span>
+      </button>
+      <div class="nav-links flex items-center gap-8 max-md:fixed max-md:top-0 max-md:right-0 max-md:bottom-0 max-md:w-[280px] max-md:flex-col max-md:items-start max-md:gap-1 max-md:pt-[calc(4.5rem+2rem)] max-md:px-8 max-md:pb-8 max-md:bg-bg max-md:dark:bg-bg-dark max-md:border-l max-md:border-line max-md:dark:border-line-dark max-md:translate-x-full max-md:transition-transform max-md:duration-400 max-md:ease-[var(--ease-out)] max-md:z-[99] [&.open]:max-md:translate-x-0">
+        <a href="index.html" class="nav-link relative text-sm max-md:text-lg max-md:py-3 max-md:w-full transition-colors duration-300 hover:text-accent">Home</a>
+        <a href="archive.html" class="nav-link relative text-sm max-md:text-lg max-md:py-3 max-md:w-full transition-colors duration-300 hover:text-accent">Archive</a>
+        <a href="about.html" class="nav-link active relative text-sm max-md:text-lg max-md:py-3 max-md:w-full transition-colors duration-300 hover:text-accent">About</a>
+        <a href="contact.html" class="nav-link relative text-sm max-md:text-lg max-md:py-3 max-md:w-full transition-colors duration-300 hover:text-accent">Contact</a>
+        <button class="theme-toggle flex items-center justify-center w-9 h-9 rounded-full hover:bg-surface dark:hover:bg-surface-dark transition-colors duration-300 cursor-pointer max-md:mt-4" aria-label="Toggle dark mode">
+          <svg class="icon-sun w-[18px] h-[18px] fill-none stroke-current" style="stroke-width:2;stroke-linecap:round;stroke-linejoin:round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon w-[18px] h-[18px] fill-none stroke-current" style="stroke-width:2;stroke-linecap:round;stroke-linejoin:round" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- About Intro -->
+    <section class="pt-[calc(4.5rem+4rem)] pb-[clamp(5rem,10vw,10rem)]">
+      <div class="max-w-[1200px] mx-auto px-[clamp(1.25rem,5vw,3rem)] flex gap-16 items-start flex-wrap max-md:flex-col">
+        <div class="flex-[0_0_320px] max-md:flex-none max-md:w-full max-md:max-w-[320px] aspect-[3/4] bg-surface dark:bg-surface-dark rounded-[var(--radius-lg)] flex items-center justify-center intro-anim intro-anim-1">
+          <svg class="w-16 h-16 stroke-muted dark:stroke-muted-dark" style="stroke-width:1;fill:none" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div class="flex-1 min-w-[300px] flex flex-col gap-6 intro-anim intro-anim-2">
+          <span class="font-body text-xs font-semibold tracking-[0.08em] uppercase text-muted dark:text-muted-dark">About the Writer</span>
+          <h1 class="font-heading text-hero font-normal leading-[1.15] tracking-[-0.02em]">Alex Morgan</h1>
+          <p class="text-muted dark:text-muted-dark leading-relaxed">I'm a designer, writer, and perpetual student of how things work. For the past decade, I've worked at the intersection of design and technology — first at agencies, then in-house at startups, and now independently.</p>
+          <p class="text-muted dark:text-muted-dark leading-relaxed">Signal started in 2022 as a way to think out loud. What began as notes to a few friends has grown into a weekly practice that reaches thousands of curious minds.</p>
+          <p class="text-muted dark:text-muted-dark leading-relaxed">I believe the best ideas live at the edges — between disciplines, between cultures, between the obvious and the overlooked. That's what I try to find every week.</p>
+
+          <div class="flex gap-12 py-8 border-t border-b border-line dark:border-line-dark my-4 flex-wrap max-sm:gap-8">
+            <div class="flex flex-col items-start gap-2">
+              <span class="font-heading text-3xl leading-none text-accent">12,400+</span>
+              <span class="text-sm text-muted dark:text-muted-dark">Subscribers</span>
+            </div>
+            <div class="flex flex-col items-start gap-2">
+              <span class="font-heading text-3xl leading-none text-accent">156</span>
+              <span class="text-sm text-muted dark:text-muted-dark">Essays</span>
+            </div>
+            <div class="flex flex-col items-start gap-2">
+              <span class="font-heading text-3xl leading-none text-accent">3 yrs</span>
+              <span class="text-sm text-muted dark:text-muted-dark">Running</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="py-[clamp(5rem,10vw,10rem)]">
+      <div class="max-w-[1200px] mx-auto px-[clamp(1.25rem,5vw,3rem)]">
+        <div class="bg-surface dark:bg-surface-dark rounded-[var(--radius-lg)] p-16 max-sm:p-8 reveal">
+          <span class="font-body text-xs font-semibold tracking-[0.08em] uppercase text-muted dark:text-muted-dark mb-4 block">The Mission</span>
+          <h2 class="font-heading text-4xl font-normal leading-[1.15] tracking-[-0.02em] mb-6">Why Signal exists</h2>
+          <div class="space-y-4 text-muted dark:text-muted-dark leading-relaxed">
+            <p>There's no shortage of information in the world. What's scarce is thoughtful interpretation — someone willing to sit with an idea long enough to find what's actually interesting about it.</p>
+            <p>Signal is my attempt to be that filter. Each week, I pick one idea and explore it deeply: where it came from, why it matters, and what it might mean for how we design, build, and create.</p>
+            <p>I write for designers, developers, founders, and anyone who cares about making things with intention. If you've ever felt overwhelmed by the pace of change but still want to stay curious, this newsletter is for you.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-[clamp(5rem,10vw,10rem)]">
+      <div class="max-w-[1200px] mx-auto px-[clamp(1.25rem,5vw,3rem)]">
+        <div class="mb-12 reveal">
+          <span class="font-body text-xs font-semibold tracking-[0.08em] uppercase text-muted dark:text-muted-dark mb-3 block">Testimonials</span>
+          <h2 class="font-heading text-4xl font-normal leading-[1.15] tracking-[-0.02em]">What readers say</h2>
+        </div>
+
+        <div class="flex gap-8 flex-wrap reveal-stagger">
+          <div class="flex-[1_1_300px] max-w-[400px] p-8 bg-surface dark:bg-surface-dark rounded-[var(--radius-md)] reveal">
+            <p class="italic leading-relaxed mb-6">"Signal is the only newsletter I actually read every week. Alex has a rare ability to make complex ideas feel personal and urgent."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-line dark:bg-line-dark flex items-center justify-center text-sm font-semibold text-accent">JK</div>
+              <div>
+                <div class="text-sm font-medium">Jamie Kim</div>
+                <div class="text-xs text-muted dark:text-muted-dark">Product Designer at Figma</div>
+              </div>
+            </div>
+          </div>
+          <div class="flex-[1_1_300px] max-w-[400px] p-8 bg-surface dark:bg-surface-dark rounded-[var(--radius-md)] reveal">
+            <p class="italic leading-relaxed mb-6">"Every essay feels like a conversation with a thoughtful friend. It's the highlight of my Tuesday mornings."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-line dark:bg-line-dark flex items-center justify-center text-sm font-semibold text-accent">SR</div>
+              <div>
+                <div class="text-sm font-medium">Sam Rivera</div>
+                <div class="text-xs text-muted dark:text-muted-dark">Creative Director, Studio Null</div>
+              </div>
+            </div>
+          </div>
+          <div class="flex-[1_1_300px] max-w-[400px] p-8 bg-surface dark:bg-surface-dark rounded-[var(--radius-md)] reveal">
+            <p class="italic leading-relaxed mb-6">"I've recommended Signal to my entire team. It's become required reading for our Monday design critiques."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-line dark:bg-line-dark flex items-center justify-center text-sm font-semibold text-accent">LP</div>
+              <div>
+                <div class="text-sm font-medium">Lena Park</div>
+                <div class="text-xs text-muted dark:text-muted-dark">VP Design, Stripe</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="py-[clamp(5rem,10vw,10rem)] text-center">
+      <div class="max-w-[1200px] mx-auto px-[clamp(1.25rem,5vw,3rem)] reveal">
+        <h2 class="font-heading text-4xl font-normal leading-[1.15] tracking-[-0.02em] mb-4">Never miss an essay</h2>
+        <p class="text-lg text-muted dark:text-muted-dark max-w-[65ch] mx-auto mb-8">Subscribe to Signal and get new essays delivered every Tuesday morning.</p>
+        <form class="subscribe-form flex gap-3 max-w-[480px] mx-auto max-sm:flex-col">
+          <input type="email" placeholder="your@email.com" required class="flex-1 px-5 py-3.5 text-sm text-ink dark:text-ink-dark bg-surface dark:bg-surface-dark border border-line dark:border-line-dark rounded-[var(--radius-md)] outline-none transition-colors duration-300 focus:border-accent placeholder:text-muted dark:placeholder:text-muted-dark">
+          <button type="submit" class="btn px-8 py-3.5 text-sm font-medium tracking-[0.02em] rounded-[var(--radius-md)] bg-accent text-white hover:bg-accent-hover dark:hover:bg-accent-hover-dark hover:-translate-y-0.5 transition-all duration-300 cursor-pointer whitespace-nowrap">Subscribe</button>
+        </form>
+        <p class="text-xs text-muted dark:text-muted-dark mt-3">Free forever. No spam. Unsubscribe anytime.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-line dark:border-line-dark pt-16 pb-8">
+    <div class="max-w-[1200px] mx-auto px-[clamp(1.25rem,5vw,3rem)]">
+      <div class="flex justify-between items-start gap-12 mb-12 flex-wrap max-md:flex-col">
+        <div class="max-w-[320px]">
+          <div class="font-heading text-xl mb-3"><em class="italic text-accent">Signal</em></div>
+          <p class="text-sm text-muted dark:text-muted-dark leading-relaxed">Thoughtful essays on design, technology, and the creative process. Written by Alex Morgan.</p>
+        </div>
+        <div class="flex gap-16 max-md:gap-8">
+          <div>
+            <h6 class="font-body text-xs font-semibold tracking-[0.08em] uppercase text-muted dark:text-muted-dark mb-4">Navigate</h6>
+            <div class="flex flex-col gap-3">
+              <a href="index.html" class="text-sm text-muted dark:text-muted-dark hover:text-accent transition-colors duration-300">Home</a>
+              <a href="archive.html" class="text-sm text-muted dark:text-muted-dark hover:text-accent transition-colors duration-300">Archive</a>
+              <a href="about.html" class="text-sm text-muted dark:text-muted-dark hover:text-accent transition-colors duration-300">About</a>
+              <a href="contact.html" class="text-sm text-muted dark:text-muted-dark hover:text-accent transition-colors duration-300">Contact</a>
+            </div>
+          </div>
+          <div>
+            <h6 class="font-body text-xs font-semibold tracking-[0.08em] uppercase text-muted dark:text-muted-dark mb-4">Connect</h6>
+            <div class="flex flex-col gap-3">
+              <a href="#" class="text-sm text-muted dark:text-muted-dark hover:text-accent transition-colors duration-300">Twitter / X</a>
+              <a href="#" class="text-sm text-muted dark:text-muted-dark hover:text-accent transition-colors duration-300">Instagram</a>
+              <a href="#" class="text-sm text-muted dark:text-muted-dark hover:text-accent transition-colors duration-300">LinkedIn</a>
+              <a href="#" class="text-sm text-muted dark:text-muted-dark hover:text-accent transition-colors duration-300 flex items-center gap-2"><svg class="w-3.5 h-3.5 fill-none stroke-current" style="stroke-width:2;stroke-linecap:round;stroke-linejoin:round" viewBox="0 0 24 24"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg> RSS Feed</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between items-center pt-8 border-t border-line dark:border-line-dark flex-wrap gap-4">
+        <span class="text-xs text-muted dark:text-muted-dark">© 2026 Signal. All rights reserved.</span>
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-xs text-muted dark:text-muted-dark hover:text-accent transition-colors duration-300">Privacy</a>
+          <a href="#" class="text-xs text-muted dark:text-muted-dark hover:text-accent transition-colors duration-300">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

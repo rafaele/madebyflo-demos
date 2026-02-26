@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work — Alex Morrison</title>
+  <meta name="description" content="Selected projects by Alex Morrison — brand identity, editorial design, and digital experiences.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>V</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --color-bg: #FAF9F6;
+      --color-bg-dark: #141414;
+      --color-surface: #F3F1EC;
+      --color-surface-dark: #1C1C1C;
+      --color-ink: #1A1A1A;
+      --color-ink-dark: #E8E4DF;
+      --color-muted: #8A8578;
+      --color-accent: #C45D3E;
+      --color-accent-hover: #A84D33;
+      --color-accent-hover-dark: #D4694A;
+      --color-line: oklch(0 0 0 / 0.08);
+      --color-line-dark: oklch(1 0 0 / 0.06);
+      --color-line-hover: oklch(0 0 0 / 0.15);
+      --color-line-hover-dark: oklch(1 0 0 / 0.12);
+      --color-nav-bg: oklch(0.98 0.005 90 / 0.85);
+      --color-nav-bg-dark: oklch(0.15 0 0 / 0.85);
+      --font-size-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --font-size-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --font-size-lg: clamp(1.125rem, 1rem + 0.65vw, 1.35rem);
+      --font-size-xl: clamp(1.25rem, 1rem + 1.25vw, 1.75rem);
+      --font-size-2xl: clamp(1.5rem, 1rem + 2.5vw, 2.5rem);
+      --font-size-3xl: clamp(2rem, 1rem + 4vw, 3.75rem);
+      --font-size-4xl: clamp(2.5rem, 1rem + 6vw, 5rem);
+      --font-size-hero: clamp(3rem, 1rem + 8vw, 7rem);
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    @variant dark (&:where(.dark, .dark *));
+  </style>
+  <script src="js/main.js"></script>
+</head>
+<body class="font-body text-base leading-relaxed tracking-[-0.01em] text-ink dark:text-ink-dark bg-bg dark:bg-bg-dark antialiased">
+
+  <!-- Navigation -->
+  <nav class="nav fixed top-0 inset-x-0 z-50 h-[4.5rem] flex items-center bg-nav-bg dark:bg-nav-bg-dark backdrop-blur-[16px] backdrop-saturate-[180%] border-b border-line dark:border-line-dark transition-transform duration-300 ease-[var(--ease-out)]" role="navigation" aria-label="Main navigation">
+    <div class="flex items-center justify-between w-full max-w-[1200px] mx-auto px-[clamp(1.25rem,5vw,3rem)]">
+      <a href="index.html" class="font-heading text-lg font-semibold tracking-[-0.03em]">Verso</a>
+      <button class="nav-toggle hidden max-md:flex flex-col gap-[5px] w-6 cursor-pointer p-0" aria-label="Toggle menu"><span class="block w-full h-[1.5px] bg-ink dark:bg-ink-dark transition-all duration-300 ease-[var(--ease-out)] origin-center"></span><span class="block w-full h-[1.5px] bg-ink dark:bg-ink-dark transition-all duration-300 ease-[var(--ease-out)] origin-center"></span><span class="block w-full h-[1.5px] bg-ink dark:bg-ink-dark transition-all duration-300 ease-[var(--ease-out)] origin-center"></span></button>
+      <div class="nav-links flex items-center gap-8 max-md:fixed max-md:top-[4.5rem] max-md:inset-x-0 max-md:bottom-0 max-md:flex-col max-md:justify-center max-md:gap-12 max-md:bg-bg max-md:dark:bg-bg-dark max-md:opacity-0 max-md:pointer-events-none max-md:transition-opacity max-md:duration-300 [&.open]:opacity-100 [&.open]:pointer-events-auto">
+        <a href="index.html" class="nav-link relative text-sm text-muted hover:text-ink dark:hover:text-ink-dark transition-colors duration-300 max-md:font-heading max-md:text-3xl max-md:text-ink max-md:dark:text-ink-dark">Home</a>
+        <a href="work.html" class="nav-link active relative text-sm text-muted hover:text-ink dark:hover:text-ink-dark transition-colors duration-300 max-md:font-heading max-md:text-3xl max-md:text-ink max-md:dark:text-ink-dark">Work</a>
+        <a href="about.html" class="nav-link relative text-sm text-muted hover:text-ink dark:hover:text-ink-dark transition-colors duration-300 max-md:font-heading max-md:text-3xl max-md:text-ink max-md:dark:text-ink-dark">About</a>
+        <a href="blog.html" class="nav-link relative text-sm text-muted hover:text-ink dark:hover:text-ink-dark transition-colors duration-300 max-md:font-heading max-md:text-3xl max-md:text-ink max-md:dark:text-ink-dark">Journal</a>
+        <a href="contact.html" class="nav-link relative text-sm text-muted hover:text-ink dark:hover:text-ink-dark transition-colors duration-300 max-md:font-heading max-md:text-3xl max-md:text-ink max-md:dark:text-ink-dark">Contact</a>
+        <button class="theme-toggle flex items-center justify-center w-9 h-9 rounded-full bg-surface dark:bg-surface-dark border border-line dark:border-line-dark hover:border-line-hover dark:hover:border-line-hover-dark hover:scale-105 transition-all duration-300 cursor-pointer max-md:mt-4" aria-label="Toggle dark mode">
+          <svg class="icon-sun w-[1.1rem] h-[1.1rem] fill-none stroke-ink dark:stroke-ink-dark" style="stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon w-[1.1rem] h-[1.1rem] fill-none stroke-ink dark:stroke-ink-dark" style="stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Header -->
+    <section class="pt-[calc(4.5rem+clamp(5rem,10vw,10rem))] pb-[clamp(5rem,10vw,10rem)]">
+      <div class="w-full max-w-[1200px] mx-auto px-[clamp(1.25rem,5vw,3rem)]">
+        <div class="mb-16 page-intro-anim page-intro-anim-1">
+          <span class="font-body text-xs font-medium tracking-[0.08em] uppercase text-muted mb-4 block">Portfolio</span>
+          <h1 class="font-heading text-4xl font-medium leading-[1.15] tracking-[-0.03em]">Selected Work</h1>
+          <p class="mt-6 text-muted text-lg max-w-[65ch]">A curated collection of brand identity, editorial, and digital design projects.</p>
+        </div>
+
+        <!-- Filters -->
+        <div class="flex flex-wrap gap-3 mb-12 page-intro-anim page-intro-anim-2">
+          <button class="filter-btn active px-5 py-2 text-sm text-muted bg-transparent border border-line dark:border-line-dark rounded-full cursor-pointer transition-all duration-300 hover:text-ink dark:hover:text-ink-dark hover:border-ink dark:hover:border-ink-dark [&.active]:bg-ink [&.active]:dark:bg-ink-dark [&.active]:text-bg [&.active]:dark:text-bg-dark [&.active]:border-ink [&.active]:dark:border-ink-dark" data-filter="all">All</button>
+          <button class="filter-btn px-5 py-2 text-sm text-muted bg-transparent border border-line dark:border-line-dark rounded-full cursor-pointer transition-all duration-300 hover:text-ink dark:hover:text-ink-dark hover:border-ink dark:hover:border-ink-dark [&.active]:bg-ink [&.active]:dark:bg-ink-dark [&.active]:text-bg [&.active]:dark:text-bg-dark [&.active]:border-ink [&.active]:dark:border-ink-dark" data-filter="brand">Brand Identity</button>
+          <button class="filter-btn px-5 py-2 text-sm text-muted bg-transparent border border-line dark:border-line-dark rounded-full cursor-pointer transition-all duration-300 hover:text-ink dark:hover:text-ink-dark hover:border-ink dark:hover:border-ink-dark [&.active]:bg-ink [&.active]:dark:bg-ink-dark [&.active]:text-bg [&.active]:dark:text-bg-dark [&.active]:border-ink [&.active]:dark:border-ink-dark" data-filter="editorial">Editorial</button>
+          <button class="filter-btn px-5 py-2 text-sm text-muted bg-transparent border border-line dark:border-line-dark rounded-full cursor-pointer transition-all duration-300 hover:text-ink dark:hover:text-ink-dark hover:border-ink dark:hover:border-ink-dark [&.active]:bg-ink [&.active]:dark:bg-ink-dark [&.active]:text-bg [&.active]:dark:text-bg-dark [&.active]:border-ink [&.active]:dark:border-ink-dark" data-filter="digital">Digital</button>
+          <button class="filter-btn px-5 py-2 text-sm text-muted bg-transparent border border-line dark:border-line-dark rounded-full cursor-pointer transition-all duration-300 hover:text-ink dark:hover:text-ink-dark hover:border-ink dark:hover:border-ink-dark [&.active]:bg-ink [&.active]:dark:bg-ink-dark [&.active]:text-bg [&.active]:dark:text-bg-dark [&.active]:border-ink [&.active]:dark:border-ink-dark" data-filter="direction">Art Direction</button>
+        </div>
+
+        <!-- Work Grid -->
+        <div class="flex flex-wrap gap-6 reveal-stagger [&>*]:basis-[calc(50%-0.75rem)] [&>*]:min-w-[calc(50%-0.75rem)] [&>*]:max-w-[calc(50%-0.75rem)] lg:[&>*]:basis-[calc(33.333%-1rem)] lg:[&>*]:min-w-[calc(33.333%-1rem)] lg:[&>*]:max-w-[calc(33.333%-1rem)] max-sm:[&>*]:basis-full max-sm:[&>*]:min-w-full max-sm:[&>*]:max-w-full">
+
+          <div class="work-card transition-all duration-[400ms] ease-[var(--ease-out)] reveal" data-category="brand">
+            <a href="#" class="project-card relative overflow-hidden rounded-[1.25rem] block cursor-pointer bg-surface dark:bg-surface-dark grain aspect-[4/3]">
+              <div class="project-card-img w-full h-full min-h-[300px] rounded-[inherit] transition-transform duration-[600ms] ease-[var(--ease-out)]" style="background:linear-gradient(135deg,#C45D3E 0%,#8A4A3A 50%,#2A1F1A 100%)"></div>
+              <div class="project-card-info absolute bottom-0 inset-x-0 z-[2] p-6 bg-gradient-to-t from-black/60 to-transparent">
+                <h3 class="font-heading text-xl text-white mb-1">Meridian</h3>
+                <span class="text-xs font-medium tracking-[0.06em] uppercase text-white/70">Brand Identity</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="work-card transition-all duration-[400ms] ease-[var(--ease-out)] reveal" data-category="editorial">
+            <a href="#" class="project-card relative overflow-hidden rounded-[1.25rem] block cursor-pointer bg-surface dark:bg-surface-dark grain aspect-[4/3]">
+              <div class="project-card-img w-full h-full min-h-[300px] rounded-[inherit] transition-transform duration-[600ms] ease-[var(--ease-out)]" style="background:linear-gradient(135deg,#C45D3E 0%,#8A4A3A 50%,#2A1F1A 100%)"></div>
+              <div class="project-card-info absolute bottom-0 inset-x-0 z-[2] p-6 bg-gradient-to-t from-black/60 to-transparent">
+                <h3 class="font-heading text-xl text-white mb-1">Kindred</h3>
+                <span class="text-xs font-medium tracking-[0.06em] uppercase text-white/70">Editorial Design</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="work-card transition-all duration-[400ms] ease-[var(--ease-out)] reveal" data-category="digital">
+            <a href="#" class="project-card relative overflow-hidden rounded-[1.25rem] block cursor-pointer bg-surface dark:bg-surface-dark grain aspect-[4/3]">
+              <div class="project-card-img w-full h-full min-h-[300px] rounded-[inherit] transition-transform duration-[600ms] ease-[var(--ease-out)]" style="background:linear-gradient(135deg,#C45D3E 0%,#8A4A3A 50%,#2A1F1A 100%)"></div>
+              <div class="project-card-info absolute bottom-0 inset-x-0 z-[2] p-6 bg-gradient-to-t from-black/60 to-transparent">
+                <h3 class="font-heading text-xl text-white mb-1">Forma</h3>
+                <span class="text-xs font-medium tracking-[0.06em] uppercase text-white/70">Digital Experience</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="work-card transition-all duration-[400ms] ease-[var(--ease-out)] reveal" data-category="direction">
+            <a href="#" class="project-card relative overflow-hidden rounded-[1.25rem] block cursor-pointer bg-surface dark:bg-surface-dark grain aspect-[4/3]">
+              <div class="project-card-img w-full h-full min-h-[300px] rounded-[inherit] transition-transform duration-[600ms] ease-[var(--ease-out)]" style="background:linear-gradient(135deg,#C45D3E 0%,#8A4A3A 50%,#2A1F1A 100%)"></div>
+              <div class="project-card-info absolute bottom-0 inset-x-0 z-[2] p-6 bg-gradient-to-t from-black/60 to-transparent">
+                <h3 class="font-heading text-xl text-white mb-1">Solace</h3>
+                <span class="text-xs font-medium tracking-[0.06em] uppercase text-white/70">Art Direction</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="work-card transition-all duration-[400ms] ease-[var(--ease-out)] reveal" data-category="brand">
+            <a href="#" class="project-card relative overflow-hidden rounded-[1.25rem] block cursor-pointer bg-surface dark:bg-surface-dark grain aspect-[4/3]">
+              <div class="project-card-img w-full h-full min-h-[300px] rounded-[inherit] transition-transform duration-[600ms] ease-[var(--ease-out)]" style="background:linear-gradient(135deg,#C45D3E 0%,#8A4A3A 50%,#2A1F1A 100%)"></div>
+              <div class="project-card-info absolute bottom-0 inset-x-0 z-[2] p-6 bg-gradient-to-t from-black/60 to-transparent">
+                <h3 class="font-heading text-xl text-white mb-1">Lumina</h3>
+                <span class="text-xs font-medium tracking-[0.06em] uppercase text-white/70">Brand Identity</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="work-card transition-all duration-[400ms] ease-[var(--ease-out)] reveal" data-category="editorial">
+            <a href="#" class="project-card relative overflow-hidden rounded-[1.25rem] block cursor-pointer bg-surface dark:bg-surface-dark grain aspect-[4/3]">
+              <div class="project-card-img w-full h-full min-h-[300px] rounded-[inherit] transition-transform duration-[600ms] ease-[var(--ease-out)]" style="background:linear-gradient(135deg,#C45D3E 0%,#8A4A3A 50%,#2A1F1A 100%)"></div>
+              <div class="project-card-info absolute bottom-0 inset-x-0 z-[2] p-6 bg-gradient-to-t from-black/60 to-transparent">
+                <h3 class="font-heading text-xl text-white mb-1">Drift</h3>
+                <span class="text-xs font-medium tracking-[0.06em] uppercase text-white/70">Editorial Design</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="work-card transition-all duration-[400ms] ease-[var(--ease-out)] reveal" data-category="digital">
+            <a href="#" class="project-card relative overflow-hidden rounded-[1.25rem] block cursor-pointer bg-surface dark:bg-surface-dark grain aspect-[4/3]">
+              <div class="project-card-img w-full h-full min-h-[300px] rounded-[inherit] transition-transform duration-[600ms] ease-[var(--ease-out)]" style="background:linear-gradient(135deg,#C45D3E 0%,#8A4A3A 50%,#2A1F1A 100%)"></div>
+              <div class="project-card-info absolute bottom-0 inset-x-0 z-[2] p-6 bg-gradient-to-t from-black/60 to-transparent">
+                <h3 class="font-heading text-xl text-white mb-1">Apex</h3>
+                <span class="text-xs font-medium tracking-[0.06em] uppercase text-white/70">Digital Experience</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="work-card transition-all duration-[400ms] ease-[var(--ease-out)] reveal" data-category="direction">
+            <a href="#" class="project-card relative overflow-hidden rounded-[1.25rem] block cursor-pointer bg-surface dark:bg-surface-dark grain aspect-[4/3]">
+              <div class="project-card-img w-full h-full min-h-[300px] rounded-[inherit] transition-transform duration-[600ms] ease-[var(--ease-out)]" style="background:linear-gradient(135deg,#C45D3E 0%,#8A4A3A 50%,#2A1F1A 100%)"></div>
+              <div class="project-card-info absolute bottom-0 inset-x-0 z-[2] p-6 bg-gradient-to-t from-black/60 to-transparent">
+                <h3 class="font-heading text-xl text-white mb-1">Terrain</h3>
+                <span class="text-xs font-medium tracking-[0.06em] uppercase text-white/70">Art Direction</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="work-card transition-all duration-[400ms] ease-[var(--ease-out)] reveal" data-category="brand">
+            <a href="#" class="project-card relative overflow-hidden rounded-[1.25rem] block cursor-pointer bg-surface dark:bg-surface-dark grain aspect-[4/3]">
+              <div class="project-card-img w-full h-full min-h-[300px] rounded-[inherit] transition-transform duration-[600ms] ease-[var(--ease-out)]" style="background:linear-gradient(135deg,#C45D3E 0%,#8A4A3A 50%,#2A1F1A 100%)"></div>
+              <div class="project-card-info absolute bottom-0 inset-x-0 z-[2] p-6 bg-gradient-to-t from-black/60 to-transparent">
+                <h3 class="font-heading text-xl text-white mb-1">Atrium</h3>
+                <span class="text-xs font-medium tracking-[0.06em] uppercase text-white/70">Brand Identity</span>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-[clamp(5rem,10vw,10rem)] text-center">
+      <div class="w-full max-w-[1200px] mx-auto px-[clamp(1.25rem,5vw,3rem)] reveal">
+        <span class="font-body text-xs font-medium tracking-[0.08em] uppercase text-muted block">Interested?</span>
+        <h2 class="font-heading text-4xl font-medium leading-[1.15] tracking-[-0.03em] mt-4 mb-6">Let's work<br>together</h2>
+        <p class="mx-auto mb-8 text-muted text-lg max-w-[65ch]">I'm currently taking on select new projects for 2026.</p>
+        <a href="contact.html" class="inline-flex items-center gap-2 px-8 py-3.5 text-sm font-medium tracking-[0.02em] rounded-[0.75rem] bg-ink dark:bg-ink-dark text-bg dark:text-bg-dark hover:bg-accent hover:-translate-y-0.5 transition-all duration-300 ease-[var(--ease-out)]">Get in Touch</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="pt-16 pb-16 border-t border-line dark:border-line-dark">
+    <div class="w-full max-w-[1200px] mx-auto px-[clamp(1.25rem,5vw,3rem)]">
+      <div class="flex justify-between items-start flex-wrap gap-8">
+        <div>
+          <div class="font-heading text-xl font-semibold tracking-[-0.03em] mb-3">Verso</div>
+          <p class="text-sm text-muted max-w-[300px]">A minimal portfolio template for designers who care about the details.</p>
+        </div>
+        <div class="flex gap-12">
+          <div>
+            <h6 class="font-body text-xs font-medium tracking-[0.08em] uppercase text-muted mb-4">Pages</h6>
+            <a href="index.html" class="block text-sm text-muted mb-3 hover:text-ink dark:hover:text-ink-dark transition-colors duration-300">Home</a>
+            <a href="work.html" class="block text-sm text-muted mb-3 hover:text-ink dark:hover:text-ink-dark transition-colors duration-300">Work</a>
+            <a href="about.html" class="block text-sm text-muted mb-3 hover:text-ink dark:hover:text-ink-dark transition-colors duration-300">About</a>
+            <a href="blog.html" class="block text-sm text-muted mb-3 hover:text-ink dark:hover:text-ink-dark transition-colors duration-300">Journal</a>
+            <a href="contact.html" class="block text-sm text-muted hover:text-ink dark:hover:text-ink-dark transition-colors duration-300">Contact</a>
+          </div>
+          <div>
+            <h6 class="font-body text-xs font-medium tracking-[0.08em] uppercase text-muted mb-4">Social</h6>
+            <a href="#" class="block text-sm text-muted mb-3 hover:text-ink dark:hover:text-ink-dark transition-colors duration-300">Twitter / X</a>
+            <a href="#" class="block text-sm text-muted mb-3 hover:text-ink dark:hover:text-ink-dark transition-colors duration-300">Instagram</a>
+            <a href="#" class="block text-sm text-muted mb-3 hover:text-ink dark:hover:text-ink-dark transition-colors duration-300">Dribbble</a>
+            <a href="#" class="block text-sm text-muted hover:text-ink dark:hover:text-ink-dark transition-colors duration-300">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between items-center flex-wrap gap-4 pt-12 mt-12 border-t border-line dark:border-line-dark text-xs text-muted">
+        <span>&copy; 2026 Alex Morrison. All rights reserved.</span>
+        <div class="flex gap-4">
+          <a href="#" class="flex items-center justify-center w-9 h-9 rounded-full border border-line dark:border-line-dark text-muted hover:text-ink dark:hover:text-ink-dark hover:border-ink dark:hover:border-ink-dark transition-all duration-300" aria-label="Twitter"><svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="#" class="flex items-center justify-center w-9 h-9 rounded-full border border-line dark:border-line-dark text-muted hover:text-ink dark:hover:text-ink-dark hover:border-ink dark:hover:border-ink-dark transition-all duration-300" aria-label="Instagram"><svg class="w-4 h-4" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" class="flex items-center justify-center w-9 h-9 rounded-full border border-line dark:border-line-dark text-muted hover:text-ink dark:hover:text-ink-dark hover:border-ink dark:hover:border-ink-dark transition-all duration-300" aria-label="Dribbble"><svg class="w-4 h-4" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72M19.13 5.09C15.22 9.14 10.93 11.29 3 12.44M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

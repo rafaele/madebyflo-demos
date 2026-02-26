@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starter — Free Tailwind Template</title>
+  <meta name="description" content="A clean, minimal single-page starter template built with Tailwind CSS v4. Free from MadebyFlo.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --color-bg: #FAFAFA;
+      --color-bg-dark: #111111;
+      --color-surface: #F0F0F0;
+      --color-surface-dark: #1A1A1A;
+      --color-ink: #111111;
+      --color-ink-dark: #ECECEC;
+      --color-muted: #71717A;
+      --color-muted-dark: #A1A1AA;
+      --color-accent: #111111;
+      --color-accent-dark: #FFFFFF;
+      --color-line: rgba(0,0,0,0.08);
+      --color-line-dark: rgba(255,255,255,0.08);
+    }
+    @variant dark (&:where(.dark, .dark *));
+  </style>
+  <style>
+    html { scroll-behavior: smooth; }
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .icon-sun, .icon-moon { display: none; }
+    :root:not(.dark) .icon-sun { display: block; }
+    .dark .icon-moon { display: block; }
+  </style>
+</head>
+<body class="font-sans text-base leading-relaxed text-ink dark:text-ink-dark bg-bg dark:bg-bg-dark antialiased">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 inset-x-0 z-50 h-16 flex items-center bg-bg/80 dark:bg-bg-dark/80 backdrop-blur-xl border-b border-line dark:border-line-dark">
+    <div class="flex items-center justify-between w-full max-w-5xl mx-auto px-6">
+      <a href="#" class="text-lg font-semibold tracking-tight">Starter</a>
+      <div class="flex items-center gap-6">
+        <a href="#features" class="hidden sm:block text-sm text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors">Features</a>
+        <a href="#testimonials" class="hidden sm:block text-sm text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors">Testimonials</a>
+        <button id="theme-toggle" class="flex items-center justify-center w-9 h-9 rounded-full bg-surface dark:bg-surface-dark border border-line dark:border-line-dark hover:scale-105 transition-all cursor-pointer" aria-label="Toggle dark mode">
+          <svg class="icon-sun w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72 1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg class="icon-moon w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="min-h-[90vh] flex items-center pt-16">
+      <div class="w-full max-w-5xl mx-auto px-6 py-24 md:py-32">
+        <div class="max-w-2xl fade-in">
+          <p class="text-sm font-medium tracking-widest uppercase text-muted dark:text-muted-dark mb-4">Free Template</p>
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.1] mb-6">Build beautiful<br>websites, faster.</h1>
+          <p class="text-lg text-muted dark:text-muted-dark leading-relaxed mb-10 max-w-lg">A clean, responsive starter template powered by Tailwind CSS v4. Dark mode included. Customize it, ship it, make it yours.</p>
+          <div class="flex flex-wrap gap-4">
+            <a href="#features" class="inline-flex items-center justify-center h-12 px-8 bg-accent dark:bg-accent-dark text-white dark:text-black text-sm font-medium rounded-full hover:opacity-90 transition-opacity">Get Started</a>
+            <a href="#testimonials" class="inline-flex items-center justify-center h-12 px-8 border border-line dark:border-line-dark text-sm font-medium rounded-full hover:bg-surface dark:hover:bg-surface-dark transition-colors">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="py-24 md:py-32">
+      <div class="w-full max-w-5xl mx-auto px-6">
+        <div class="text-center mb-16 fade-in">
+          <p class="text-sm font-medium tracking-widest uppercase text-muted dark:text-muted-dark mb-3">Features</p>
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Everything you need to start</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="p-8 rounded-2xl bg-surface dark:bg-surface-dark border border-line dark:border-line-dark fade-in">
+            <div class="w-10 h-10 rounded-xl bg-ink dark:bg-white flex items-center justify-center mb-5">
+              <svg class="w-5 h-5 text-white dark:text-black" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Tailwind CSS v4</h3>
+            <p class="text-sm text-muted dark:text-muted-dark leading-relaxed">Built with the latest Tailwind CSS, featuring the new @theme directive and modern CSS features.</p>
+          </div>
+          <div class="p-8 rounded-2xl bg-surface dark:bg-surface-dark border border-line dark:border-line-dark fade-in">
+            <div class="w-10 h-10 rounded-xl bg-ink dark:bg-white flex items-center justify-center mb-5">
+              <svg class="w-5 h-5 text-white dark:text-black" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Dark Mode</h3>
+            <p class="text-sm text-muted dark:text-muted-dark leading-relaxed">Seamless light and dark mode with system preference detection and manual toggle support.</p>
+          </div>
+          <div class="p-8 rounded-2xl bg-surface dark:bg-surface-dark border border-line dark:border-line-dark fade-in">
+            <div class="w-10 h-10 rounded-xl bg-ink dark:bg-white flex items-center justify-center mb-5">
+              <svg class="w-5 h-5 text-white dark:text-black" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Fully Responsive</h3>
+            <p class="text-sm text-muted dark:text-muted-dark leading-relaxed">Looks great on every screen size, from mobile phones to ultra-wide desktop monitors.</p>
+          </div>
+          <div class="p-8 rounded-2xl bg-surface dark:bg-surface-dark border border-line dark:border-line-dark fade-in">
+            <div class="w-10 h-10 rounded-xl bg-ink dark:bg-white flex items-center justify-center mb-5">
+              <svg class="w-5 h-5 text-white dark:text-black" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Clean Code</h3>
+            <p class="text-sm text-muted dark:text-muted-dark leading-relaxed">Well-structured, semantic HTML with clear naming conventions. Easy to read, easy to customize.</p>
+          </div>
+          <div class="p-8 rounded-2xl bg-surface dark:bg-surface-dark border border-line dark:border-line-dark fade-in">
+            <div class="w-10 h-10 rounded-xl bg-ink dark:bg-white flex items-center justify-center mb-5">
+              <svg class="w-5 h-5 text-white dark:text-black" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">SEO Ready</h3>
+            <p class="text-sm text-muted dark:text-muted-dark leading-relaxed">Semantic markup, proper heading hierarchy, and meta tags configured out of the box.</p>
+          </div>
+          <div class="p-8 rounded-2xl bg-surface dark:bg-surface-dark border border-line dark:border-line-dark fade-in">
+            <div class="w-10 h-10 rounded-xl bg-ink dark:bg-white flex items-center justify-center mb-5">
+              <svg class="w-5 h-5 text-white dark:text-black" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Zero Build Step</h3>
+            <p class="text-sm text-muted dark:text-muted-dark leading-relaxed">Uses the Tailwind CSS browser CDN — just open the HTML file and start editing. No tooling required.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-24 md:py-32 border-t border-line dark:border-line-dark">
+      <div class="w-full max-w-5xl mx-auto px-6">
+        <div class="text-center mb-16 fade-in">
+          <p class="text-sm font-medium tracking-widest uppercase text-muted dark:text-muted-dark mb-3">Testimonials</p>
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Loved by developers</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="p-8 rounded-2xl bg-surface dark:bg-surface-dark border border-line dark:border-line-dark fade-in">
+            <p class="text-sm leading-relaxed text-muted dark:text-muted-dark mb-6">"Incredibly clean and well-structured. I had my landing page up in under an hour. The dark mode implementation is spot on."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-ink/10 dark:bg-white/10 flex items-center justify-center text-sm font-semibold">JD</div>
+              <div>
+                <p class="text-sm font-medium">Jamie Davis</p>
+                <p class="text-xs text-muted dark:text-muted-dark">Product Designer</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-8 rounded-2xl bg-surface dark:bg-surface-dark border border-line dark:border-line-dark fade-in">
+            <p class="text-sm leading-relaxed text-muted dark:text-muted-dark mb-6">"Perfect starting point for client projects. The neutral design system makes it easy to customize for any brand."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-ink/10 dark:bg-white/10 flex items-center justify-center text-sm font-semibold">MK</div>
+              <div>
+                <p class="text-sm font-medium">Morgan Kim</p>
+                <p class="text-xs text-muted dark:text-muted-dark">Freelance Developer</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-8 rounded-2xl bg-surface dark:bg-surface-dark border border-line dark:border-line-dark fade-in">
+            <p class="text-sm leading-relaxed text-muted dark:text-muted-dark mb-6">"If this is the free template, the paid ones must be incredible. Seriously impressed by the quality and attention to detail."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-ink/10 dark:bg-white/10 flex items-center justify-center text-sm font-semibold">AR</div>
+              <div>
+                <p class="text-sm font-medium">Alex Rivera</p>
+                <p class="text-xs text-muted dark:text-muted-dark">Startup Founder</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 md:py-32">
+      <div class="w-full max-w-5xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto fade-in">
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">Ready for more?</h2>
+          <p class="text-muted dark:text-muted-dark mb-10 leading-relaxed">This is just the beginning. Explore our collection of premium, multi-page templates built with the same quality and attention to detail.</p>
+          <a href="https://madebyflo.com" class="inline-flex items-center justify-center h-12 px-8 bg-accent dark:bg-accent-dark text-white dark:text-black text-sm font-medium rounded-full hover:opacity-90 transition-opacity">Browse Templates →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-line dark:border-line-dark py-12">
+    <div class="w-full max-w-5xl mx-auto px-6">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-6">
+          <a href="https://madebyflo.com" class="text-sm text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors">MadebyFlo</a>
+          <a href="https://x.com/Florinda_Lucia" class="text-sm text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors">Twitter</a>
+          <a href="#" class="text-sm text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors">GitHub</a>
+        </div>
+        <p class="text-sm text-muted dark:text-muted-dark">© 2026 MadebyFlo. Free to use.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Theme toggle
+    const THEME_KEY = 'starter-theme';
+    function getTheme() {
+      return localStorage.getItem(THEME_KEY) || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    }
+    function setTheme(t) {
+      document.documentElement.classList.toggle('dark', t === 'dark');
+      localStorage.setItem(THEME_KEY, t);
+    }
+    setTheme(getTheme());
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      setTheme(getTheme() === 'dark' ? 'light' : 'dark');
+    });
+
+    // Scroll fade-in
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }});
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+  </script>
+
+</body>
+</html>

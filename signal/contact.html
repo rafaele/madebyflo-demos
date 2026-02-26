@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Signal</title>
+  <meta name="description" content="Get in touch with Alex Morgan. Collaborations, speaking, or just say hello.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --font-heading: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --color-bg: #FAFAF8;
+      --color-bg-dark: #131313;
+      --color-surface: #F2F0ED;
+      --color-surface-dark: #1C1C1B;
+      --color-ink: #1A1A1A;
+      --color-ink-dark: #EAEAE6;
+      --color-muted: #7A7A72;
+      --color-muted-dark: #8A8A82;
+      --color-accent: #E86C5D;
+      --color-accent-hover: #D45A4C;
+      --color-accent-hover-dark: #F07E70;
+      --color-line: rgba(0, 0, 0, 0.08);
+      --color-line-dark: rgba(255, 255, 255, 0.07);
+      --color-line-hover: rgba(0, 0, 0, 0.15);
+      --color-line-hover-dark: rgba(255, 255, 255, 0.14);
+      --color-nav-bg: rgba(250, 250, 248, 0.88);
+      --color-nav-bg-dark: rgba(19, 19, 19, 0.88);
+      --color-success: #3DA66D;
+      --font-size-hero: clamp(3rem, 1.5rem + 7vw, 6rem);
+      --font-size-4xl: clamp(2.5rem, 1rem + 6vw, 5rem);
+      --font-size-lg: clamp(1.125rem, 1rem + 0.65vw, 1.35rem);
+      --font-size-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --font-size-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+      --radius-md: 0.75rem;
+      --radius-full: 9999px;
+    }
+    @variant dark (&:where(.dark, .dark *));
+  </style>
+  <script src="js/main.js"></script>
+</head>
+<body class="font-body text-base leading-[1.7] tracking-[-0.01em] text-ink dark:text-ink-dark bg-bg dark:bg-bg-dark antialiased">
+
+  <!-- Navigation -->
+  <nav class="nav fixed top-0 inset-x-0 z-50 h-[4.5rem] flex items-center bg-nav-bg dark:bg-nav-bg-dark backdrop-blur-[16px] backdrop-saturate-[180%] border-b border-line dark:border-line-dark transition-transform duration-300 ease-[var(--ease-out)] [&.nav-hidden]:-translate-y-full">
+    <div class="flex items-center justify-between w-full max-w-[1200px] mx-auto px-[clamp(1.25rem,5vw,3rem)]">
+      <a href="index.html" class="font-heading text-xl tracking-[-0.02em]"><em class="italic text-accent">Signal</em></a>
+      <button class="nav-toggle hidden max-md:flex flex-col justify-center gap-[5px] w-9 h-9 z-[101] cursor-pointer" aria-label="Toggle menu" aria-expanded="false">
+        <span class="block w-[22px] h-[1.5px] bg-ink dark:bg-ink-dark rounded-sm transition-all duration-300 ease-[var(--ease-out)] origin-center"></span>
+        <span class="block w-[22px] h-[1.5px] bg-ink dark:bg-ink-dark rounded-sm transition-all duration-300 ease-[var(--ease-out)] origin-center"></span>
+        <span class="block w-[22px] h-[1.5px] bg-ink dark:bg-ink-dark rounded-sm transition-all duration-300 ease-[var(--ease-out)] origin-center"></span>
+      </button>
+      <div class="nav-links flex items-center gap-8 max-md:fixed max-md:top-0 max-md:right-0 max-md:bottom-0 max-md:w-[280px] max-md:flex-col max-md:items-start max-md:gap-1 max-md:pt-[calc(4.5rem+2rem)] max-md:px-8 max-md:pb-8 max-md:bg-bg max-md:dark:bg-bg-dark max-md:border-l max-md:border-line max-md:dark:border-line-dark max-md:translate-x-full max-md:transition-transform max-md:duration-400 max-md:ease-[var(--ease-out)] max-md:z-[99] [&.open]:max-md:translate-x-0">
+        <a href="index.html" class="nav-link relative text-sm max-md:text-lg max-md:py-3 max-md:w-full transition-colors duration-300 hover:text-accent">Home</a>
+        <a href="archive.html" class="nav-link relative text-sm max-md:text-lg max-md:py-3 max-md:w-full transition-colors duration-300 hover:text-accent">Archive</a>
+        <a href="about.html" class="nav-link relative text-sm max-md:text-lg max-md:py-3 max-md:w-full transition-colors duration-300 hover:text-accent">About</a>
+        <a href="contact.html" class="nav-link active relative text-sm max-md:text-lg max-md:py-3 max-md:w-full transition-colors duration-300 hover:text-accent">Contact</a>
+        <button class="theme-toggle flex items-center justify-center w-9 h-9 rounded-full hover:bg-surface dark:hover:bg-surface-dark transition-colors duration-300 cursor-pointer max-md:mt-4" aria-label="Toggle dark mode">
+          <svg class="icon-sun w-[18px] h-[18px] fill-none stroke-current" style="stroke-width:2;stroke-linecap:round;stroke-linejoin:round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon w-[18px] h-[18px] fill-none stroke-current" style="stroke-width:2;stroke-linecap:round;stroke-linejoin:round" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Page Intro -->
+    <section class="pt-[calc(4.5rem+4rem)] pb-[clamp(5rem,10vw,10rem)] text-center">
+      <div class="max-w-[1200px] mx-auto px-[clamp(1.25rem,5vw,3rem)]">
+        <p class="font-body text-xs font-semibold tracking-[0.08em] uppercase text-muted dark:text-muted-dark mb-3 intro-anim intro-anim-1">Get in Touch</p>
+        <h1 class="font-heading text-hero font-normal leading-[1.15] tracking-[-0.02em] mb-6 intro-anim intro-anim-2">Say <em class="italic text-accent">Hello</em></h1>
+        <p class="text-lg text-muted dark:text-muted-dark max-w-[600px] mx-auto leading-relaxed intro-anim intro-anim-3">Have a question, collaboration idea, or just want to say hi? I'd love to hear from you.</p>
+      </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="pb-[clamp(5rem,10vw,10rem)]">
+      <div class="max-w-[1200px] mx-auto px-[clamp(1.25rem,5vw,3rem)]">
+        <div class="flex gap-16 items-start max-md:flex-col">
+          <!-- Form -->
+          <div class="flex-1 reveal">
+            <form class="contact-form flex flex-col gap-6">
+              <div class="flex flex-col gap-2">
+                <label for="name" class="text-sm font-medium">Name</label>
+                <input type="text" id="name" placeholder="Your name" required class="px-5 py-3.5 text-sm text-ink dark:text-ink-dark bg-surface dark:bg-surface-dark border border-line dark:border-line-dark rounded-[var(--radius-md)] outline-none transition-colors duration-300 focus:border-accent">
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="email" class="text-sm font-medium">Email</label>
+                <input type="email" id="email" placeholder="your@email.com" required class="px-5 py-3.5 text-sm text-ink dark:text-ink-dark bg-surface dark:bg-surface-dark border border-line dark:border-line-dark rounded-[var(--radius-md)] outline-none transition-colors duration-300 focus:border-accent">
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="subject" class="text-sm font-medium">Subject</label>
+                <input type="text" id="subject" placeholder="What's this about?" class="px-5 py-3.5 text-sm text-ink dark:text-ink-dark bg-surface dark:bg-surface-dark border border-line dark:border-line-dark rounded-[var(--radius-md)] outline-none transition-colors duration-300 focus:border-accent">
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="message" class="text-sm font-medium">Message</label>
+                <textarea id="message" placeholder="Your message..." required class="px-5 py-3.5 text-sm text-ink dark:text-ink-dark bg-surface dark:bg-surface-dark border border-line dark:border-line-dark rounded-[var(--radius-md)] outline-none transition-colors duration-300 focus:border-accent resize-y min-h-[160px]"></textarea>
+              </div>
+              <button type="submit" class="btn self-start px-8 py-3.5 text-sm font-medium tracking-[0.02em] rounded-[var(--radius-md)] bg-accent text-white hover:bg-accent-hover dark:hover:bg-accent-hover-dark hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">Send Message</button>
+            </form>
+          </div>
+
+          <!-- Sidebar -->
+          <div class="flex-[0_0_320px] max-md:flex-none max-md:w-full flex flex-col gap-8 reveal-right">
+            <div>
+              <h5 class="font-heading text-xl mb-3">Email</h5>
+              <p class="text-muted dark:text-muted-dark">hello@signal.newsletter</p>
+            </div>
+            <div>
+              <h5 class="font-heading text-xl mb-3">Response Time</h5>
+              <p class="text-muted dark:text-muted-dark">I typically respond within 48 hours. For urgent inquiries, reach out on Twitter.</p>
+            </div>
+            <div>
+              <h5 class="font-heading text-xl mb-3">Connect</h5>
+              <div class="flex gap-3">
+                <a href="#" class="flex items-center justify-center w-11 h-11 rounded-full border border-line dark:border-line-dark hover:border-accent hover:text-accent hover:-translate-y-0.5 transition-all duration-300" aria-label="Twitter">
+                  <svg class="w-[18px] h-[18px] fill-none stroke-current" style="stroke-width:2;stroke-linecap:round;stroke-linejoin:round" viewBox="0 0 24 24"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>
+                </a>
+                <a href="#" class="flex items-center justify-center w-11 h-11 rounded-full border border-line dark:border-line-dark hover:border-accent hover:text-accent hover:-translate-y-0.5 transition-all duration-300" aria-label="Instagram">
+                  <svg class="w-[18px] h-[18px] fill-none stroke-current" style="stroke-width:2;stroke-linecap:round;stroke-linejoin:round" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+                </a>
+                <a href="#" class="flex items-center justify-center w-11 h-11 rounded-full border border-line dark:border-line-dark hover:border-accent hover:text-accent hover:-translate-y-0.5 transition-all duration-300" aria-label="LinkedIn">
+                  <svg class="w-[18px] h-[18px] fill-none stroke-current" style="stroke-width:2;stroke-linecap:round;stroke-linejoin:round" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="#" class="flex items-center justify-center w-11 h-11 rounded-full border border-line dark:border-line-dark hover:border-accent hover:text-accent hover:-translate-y-0.5 transition-all duration-300" aria-label="RSS Feed">
+                  <svg class="w-[18px] h-[18px] fill-none stroke-current" style="stroke-width:2;stroke-linecap:round;stroke-linejoin:round" viewBox="0 0 24 24"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+                </a>
+              </div>
+            </div>
+            <div>
+              <h5 class="font-heading text-xl mb-3">Speaking</h5>
+              <p class="text-muted dark:text-muted-dark">I occasionally speak at design conferences and podcasts. Reach out with details about your event.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="py-[clamp(5rem,10vw,10rem)] text-center">
+      <div class="max-w-[1200px] mx-auto px-[clamp(1.25rem,5vw,3rem)] reveal">
+        <h2 class="font-heading text-4xl font-normal leading-[1.15] tracking-[-0.02em] mb-4">Never miss an essay</h2>
+        <p class="text-lg text-muted dark:text-muted-dark max-w-[65ch] mx-auto mb-8">Subscribe to Signal and get new essays delivered every Tuesday morning.</p>
+        <form class="subscribe-form flex gap-3 max-w-[480px] mx-auto max-sm:flex-col">
+          <input type="email" placeholder="your@email.com" required class="flex-1 px-5 py-3.5 text-sm text-ink dark:text-ink-dark bg-surface dark:bg-surface-dark border border-line dark:border-line-dark rounded-[var(--radius-md)] outline-none transition-colors duration-300 focus:border-accent placeholder:text-muted dark:placeholder:text-muted-dark">
+          <button type="submit" class="btn px-8 py-3.5 text-sm font-medium tracking-[0.02em] rounded-[var(--radius-md)] bg-accent text-white hover:bg-accent-hover dark:hover:bg-accent-hover-dark hover:-translate-y-0.5 transition-all duration-300 cursor-pointer whitespace-nowrap">Subscribe</button>
+        </form>
+        <p class="text-xs text-muted dark:text-muted-dark mt-3">Free forever. No spam. Unsubscribe anytime.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-line dark:border-line-dark pt-16 pb-8">
+    <div class="max-w-[1200px] mx-auto px-[clamp(1.25rem,5vw,3rem)]">
+      <div class="flex justify-between items-start gap-12 mb-12 flex-wrap max-md:flex-col">
+        <div class="max-w-[320px]">
+          <div class="font-heading text-xl mb-3"><em class="italic text-accent">Signal</em></div>
+          <p class="text-sm text-muted dark:text-muted-dark leading-relaxed">Thoughtful essays on design, technology, and the creative process. Written by Alex Morgan.</p>
+        </div>
+        <div class="flex gap-16 max-md:gap-8">
+          <div>
+            <h6 class="font-body text-xs font-semibold tracking-[0.08em] uppercase text-muted dark:text-muted-dark mb-4">Navigate</h6>
+            <div class="flex flex-col gap-3">
+              <a href="index.html" class="text-sm text-muted dark:text-muted-dark hover:text-accent transition-colors duration-300">Home</a>
+              <a href="archive.html" class="text-sm text-muted dark:text-muted-dark hover:text-accent transition-colors duration-300">Archive</a>
+              <a href="about.html" class="text-sm text-muted dark:text-muted-dark hover:text-accent transition-colors duration-300">About</a>
+              <a href="contact.html" class="text-sm text-muted dark:text-muted-dark hover:text-accent transition-colors duration-300">Contact</a>
+            </div>
+          </div>
+          <div>
+            <h6 class="font-body text-xs font-semibold tracking-[0.08em] uppercase text-muted dark:text-muted-dark mb-4">Connect</h6>
+            <div class="flex flex-col gap-3">
+              <a href="#" class="text-sm text-muted dark:text-muted-dark hover:text-accent transition-colors duration-300">Twitter / X</a>
+              <a href="#" class="text-sm text-muted dark:text-muted-dark hover:text-accent transition-colors duration-300">Instagram</a>
+              <a href="#" class="text-sm text-muted dark:text-muted-dark hover:text-accent transition-colors duration-300">LinkedIn</a>
+              <a href="#" class="text-sm text-muted dark:text-muted-dark hover:text-accent transition-colors duration-300 flex items-center gap-2"><svg class="w-3.5 h-3.5 fill-none stroke-current" style="stroke-width:2;stroke-linecap:round;stroke-linejoin:round" viewBox="0 0 24 24"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg> RSS Feed</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between items-center pt-8 border-t border-line dark:border-line-dark flex-wrap gap-4">
+        <span class="text-xs text-muted dark:text-muted-dark">© 2026 Signal. All rights reserved.</span>
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-xs text-muted dark:text-muted-dark hover:text-accent transition-colors duration-300">Privacy</a>
+          <a href="#" class="text-xs text-muted dark:text-muted-dark hover:text-accent transition-colors duration-300">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

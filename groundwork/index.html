@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Groundwork — Reliable Contractor Services</title>
+  <meta name="description" content="Professional contractor services for your home and business. Licensed, insured, and trusted by hundreds of homeowners. Get a free estimate today.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --font-heading: 'DM Sans', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --color-bg: #FFFFFF;
+      --color-bg-dark: #0F1923;
+      --color-surface: #F5F5F5;
+      --color-surface-dark: #162231;
+      --color-dark-bg: #1B2432;
+      --color-dark-bg-dark: #0A1018;
+      --color-ink: #1B2432;
+      --color-ink-dark: #EAEAEA;
+      --color-muted: #4A5568;
+      --color-muted-dark: #A0AEC0;
+      --color-light: #718096;
+      --color-light-dark: #718096;
+      --color-accent: #E67E22;
+      --color-accent-dark: #CF6D17;
+      --color-accent-light: #F39C4A;
+      --color-border: #E2E8F0;
+      --color-border-dark: rgba(255, 255, 255, 0.1);
+      --color-border-light: #EDF2F7;
+      --color-border-light-dark: rgba(255, 255, 255, 0.06);
+      --color-nav-bg: rgba(255, 255, 255, 0.92);
+      --color-nav-bg-dark: rgba(15, 25, 35, 0.92);
+      --font-size-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --font-size-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --font-size-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --font-size-lg: clamp(1.125rem, 1rem + 0.5vw, 1.3rem);
+      --font-size-xl: clamp(1.25rem, 1rem + 1vw, 1.65rem);
+      --font-size-2xl: clamp(1.5rem, 1rem + 2vw, 2.25rem);
+      --font-size-3xl: clamp(1.875rem, 1rem + 3.5vw, 3rem);
+      --font-size-4xl: clamp(2.25rem, 1rem + 5vw, 3.75rem);
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+      --shadow-lg: 0 10px 30px rgba(0,0,0,0.12);
+      --shadow-sm-dark: 0 1px 3px rgba(0,0,0,0.3);
+      --shadow-md-dark: 0 4px 12px rgba(0,0,0,0.4);
+      --shadow-lg-dark: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    @variant dark (&:where(.dark, .dark *));
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Groundwork Contracting",
+    "description": "Professional contractor services for residential and commercial properties.",
+    "url": "https://example.com",
+    "telephone": "+1-555-123-4567",
+    "address": { "@type": "PostalAddress", "streetAddress": "123 Main Street", "addressLocality": "Springfield", "addressRegion": "IL", "postalCode": "62701" },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "127" },
+    "priceRange": "$$"
+  }
+  </script>
+  <script src="js/main.js" defer></script>
+</head>
+<body class="font-body text-base leading-[1.65] text-ink dark:text-ink-dark bg-bg dark:bg-bg-dark antialiased">
+
+  <!-- ====== HEADER ====== -->
+  <header class="site-header fixed top-0 left-0 w-full z-[100] bg-nav-bg dark:bg-nav-bg-dark backdrop-blur-[12px] border-b border-border-light dark:border-border-light-dark transition-all duration-[var(--ease)]" role="banner">
+    <div class="container flex items-center justify-between h-[4.25rem] w-full max-w-[1200px] mx-auto px-[clamp(1rem,5vw,3rem)]">
+      <a href="index.html" class="font-heading font-extrabold text-[1.35rem] tracking-[-0.02em] text-ink dark:text-ink-dark no-underline">Ground<span class="text-accent">work</span></a>
+      <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
+        <a href="index.html" class="nav-link font-heading text-sm font-medium text-accent no-underline transition-colors duration-[var(--ease)]">Home</a>
+        <a href="services.html" class="nav-link font-heading text-sm font-medium text-muted dark:text-muted-dark hover:text-accent no-underline transition-colors duration-[var(--ease)]">Services</a>
+        <a href="about.html" class="nav-link font-heading text-sm font-medium text-muted dark:text-muted-dark hover:text-accent no-underline transition-colors duration-[var(--ease)]">About</a>
+        <a href="gallery.html" class="nav-link font-heading text-sm font-medium text-muted dark:text-muted-dark hover:text-accent no-underline transition-colors duration-[var(--ease)]">Projects</a>
+        <a href="contact.html" class="nav-link font-heading text-sm font-medium text-muted dark:text-muted-dark hover:text-accent no-underline transition-colors duration-[var(--ease)]">Contact</a>
+      </nav>
+      <div class="flex items-center gap-4">
+        <a href="tel:+15551234567" class="flex items-center gap-1.5 font-heading font-bold text-ink dark:text-ink-dark text-sm no-underline" aria-label="Call us">
+          <svg class="w-[1.1em] h-[1.1em] text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          (555) 123-4567
+        </a>
+        <button class="theme-toggle w-9 h-9 flex items-center justify-center rounded-[0.75rem] border border-border dark:border-border-dark cursor-pointer hover:border-accent transition-colors duration-[var(--ease)]" aria-label="Toggle dark mode">
+          <svg class="w-[18px] h-[18px] hidden dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="w-[18px] h-[18px] block dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <a href="contact.html" class="hidden md:inline-flex items-center gap-2 font-heading font-semibold text-sm px-[1.75rem] py-[0.85rem] rounded-[0.75rem] bg-accent text-white no-underline hover:bg-accent-dark hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(230,126,34,0.35)] transition-all duration-[var(--ease)]">Free Estimate</a>
+      </div>
+      <button class="hamburger flex md:hidden flex-col gap-[5px] p-1 cursor-pointer" aria-label="Menu" aria-expanded="false">
+        <span class="block w-6 h-0.5 bg-ink dark:bg-ink-dark rounded-sm relative transition-all duration-[var(--ease)]"></span>
+        <span class="block w-6 h-0.5 bg-ink dark:bg-ink-dark rounded-sm"></span>
+        <span class="block w-6 h-0.5 bg-ink dark:bg-ink-dark rounded-sm"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile nav -->
+  <nav class="mobile-nav hidden fixed inset-0 top-[4.25rem] z-[99] bg-bg dark:bg-bg-dark p-[clamp(1rem,5vw,3rem)] pt-8 flex-col gap-2" aria-label="Mobile navigation">
+    <a href="index.html" class="font-heading text-xl font-semibold text-ink dark:text-ink-dark py-3 border-b border-border-light dark:border-border-light-dark no-underline hover:text-accent">Home</a>
+    <a href="services.html" class="font-heading text-xl font-semibold text-ink dark:text-ink-dark py-3 border-b border-border-light dark:border-border-light-dark no-underline hover:text-accent">Services</a>
+    <a href="about.html" class="font-heading text-xl font-semibold text-ink dark:text-ink-dark py-3 border-b border-border-light dark:border-border-light-dark no-underline hover:text-accent">About</a>
+    <a href="gallery.html" class="font-heading text-xl font-semibold text-ink dark:text-ink-dark py-3 border-b border-border-light dark:border-border-light-dark no-underline hover:text-accent">Projects</a>
+    <a href="contact.html" class="font-heading text-xl font-semibold text-ink dark:text-ink-dark py-3 border-b border-border-light dark:border-border-light-dark no-underline hover:text-accent">Contact</a>
+    <a href="tel:+15551234567" class="mt-4 inline-flex items-center justify-center gap-2 font-heading font-semibold text-base px-[2.25rem] py-4 rounded-[0.75rem] bg-accent text-white no-underline">📞 (555) 123-4567</a>
+    <a href="contact.html" class="inline-flex items-center justify-center gap-2 font-heading font-semibold text-base px-[2.25rem] py-4 rounded-[0.75rem] bg-transparent text-ink dark:text-ink-dark border-2 border-border dark:border-border-dark no-underline">Get Free Estimate</a>
+  </nav>
+
+  <!-- ====== HERO ====== -->
+  <section class="pt-32 md:pt-40 pb-[clamp(3.5rem,7vw,7rem)] relative overflow-hidden">
+    <div class="w-full max-w-[1200px] mx-auto px-[clamp(1rem,5vw,3rem)] flex flex-wrap gap-[2.5rem] md:gap-12 items-center">
+      <div class="basis-full md:basis-[calc(50%-1.5rem)] md:max-w-[calc(50%-1.5rem)] max-w-[560px] fade-up">
+        <div class="inline-flex items-center gap-2 bg-accent/10 text-accent font-heading font-semibold text-xs px-4 py-[0.4rem] rounded-full mb-5">
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Rated 4.9/5 by 127+ Homeowners
+        </div>
+        <h1 class="font-heading text-4xl font-bold leading-[1.2] tracking-[-0.03em] mb-5">Quality Work You Can <span class="text-accent">Trust</span></h1>
+        <p class="text-lg text-muted dark:text-muted-dark leading-[1.7] mb-8">From renovations to repairs, we deliver professional contracting services with transparent pricing, licensed crews, and a satisfaction guarantee.</p>
+        <div class="flex flex-wrap gap-3 max-[480px]:flex-col">
+          <a href="contact.html" class="inline-flex items-center justify-center gap-2 font-heading font-semibold text-base px-[2.25rem] py-4 rounded-[0.75rem] bg-accent text-white no-underline hover:bg-accent-dark hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(230,126,34,0.35)] transition-all duration-[var(--ease)] max-[480px]:w-full">
+            Get a Free Estimate
+            <svg class="w-[1em] h-[1em]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="services.html" class="inline-flex items-center justify-center gap-2 font-heading font-semibold text-base px-[2.25rem] py-4 rounded-[0.75rem] bg-transparent text-ink dark:text-ink-dark border-2 border-border dark:border-border-dark no-underline hover:border-accent hover:text-accent transition-all duration-[var(--ease)] max-[480px]:w-full">Our Services</a>
+        </div>
+        <div class="mt-12 flex flex-wrap gap-x-10 gap-y-4 max-[480px]:flex-col">
+          <div class="flex items-center gap-2 text-sm text-muted dark:text-muted-dark font-medium">
+            <svg class="w-5 h-5 text-accent shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Licensed &amp; Insured
+          </div>
+          <div class="flex items-center gap-2 text-sm text-muted dark:text-muted-dark font-medium">
+            <svg class="w-5 h-5 text-accent shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            20+ Years Experience
+          </div>
+          <div class="flex items-center gap-2 text-sm text-muted dark:text-muted-dark font-medium">
+            <svg class="w-5 h-5 text-accent shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+            Satisfaction Guaranteed
+          </div>
+        </div>
+      </div>
+      <div class="basis-full md:basis-[calc(50%-1.5rem)] md:max-w-[calc(50%-1.5rem)] rounded-[1rem] overflow-hidden aspect-[4/3] bg-surface dark:bg-surface-dark fade-up">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop" alt="Professional contractor working on a home renovation project" loading="eager" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SERVICES ====== -->
+  <section class="py-[clamp(3.5rem,7vw,7rem)] bg-surface dark:bg-surface-dark">
+    <div class="w-full max-w-[1200px] mx-auto px-[clamp(1rem,5vw,3rem)]">
+      <div class="text-center mb-12 fade-up">
+        <p class="font-heading text-sm font-bold uppercase tracking-[0.08em] text-accent mb-3">What We Do</p>
+        <h2 class="font-heading text-3xl font-bold leading-[1.2] tracking-[-0.02em] mb-4">Our Services</h2>
+        <p class="text-lg text-muted dark:text-muted-dark max-w-[600px] mx-auto">Comprehensive contracting solutions for residential and commercial properties.</p>
+      </div>
+      <div class="flex flex-wrap gap-6">
+        <div class="basis-full sm:basis-[calc(50%-0.75rem)] lg:basis-[calc(33.333%-1rem)] min-w-[280px] bg-bg dark:bg-bg-dark border border-border dark:border-border-dark rounded-[1rem] p-8 transition-all duration-[var(--ease)] hover:border-accent hover:-translate-y-[3px] hover:shadow-md dark:hover:shadow-md-dark fade-up">
+          <div class="w-12 h-12 rounded-[0.75rem] bg-accent/10 flex items-center justify-center text-accent mb-5">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3 class="font-heading text-lg font-bold leading-[1.2] tracking-[-0.02em] mb-2">Home Renovations</h3>
+          <p class="text-sm text-light dark:text-light-dark mb-4">Complete kitchen, bathroom, and whole-home remodeling with quality materials and expert craftsmanship.</p>
+          <a href="services.html" class="font-heading font-semibold text-sm text-accent inline-flex items-center gap-1.5 no-underline">Learn More <svg class="w-[1em] h-[1em] transition-transform duration-[var(--ease)] group-hover:translate-x-[3px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="basis-full sm:basis-[calc(50%-0.75rem)] lg:basis-[calc(33.333%-1rem)] min-w-[280px] bg-bg dark:bg-bg-dark border border-border dark:border-border-dark rounded-[1rem] p-8 transition-all duration-[var(--ease)] hover:border-accent hover:-translate-y-[3px] hover:shadow-md dark:hover:shadow-md-dark fade-up">
+          <div class="w-12 h-12 rounded-[0.75rem] bg-accent/10 flex items-center justify-center text-accent mb-5">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="22" height="12" rx="2"/><path d="M1 10h22"/></svg>
+          </div>
+          <h3 class="font-heading text-lg font-bold leading-[1.2] tracking-[-0.02em] mb-2">Roofing</h3>
+          <p class="text-sm text-light dark:text-light-dark mb-4">Roof repairs, replacements, and inspections. We work with shingles, metal, tile, and flat roofing systems.</p>
+          <a href="services.html" class="font-heading font-semibold text-sm text-accent inline-flex items-center gap-1.5 no-underline">Learn More <svg class="w-[1em] h-[1em]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="basis-full sm:basis-[calc(50%-0.75rem)] lg:basis-[calc(33.333%-1rem)] min-w-[280px] bg-bg dark:bg-bg-dark border border-border dark:border-border-dark rounded-[1rem] p-8 transition-all duration-[var(--ease)] hover:border-accent hover:-translate-y-[3px] hover:shadow-md dark:hover:shadow-md-dark fade-up">
+          <div class="w-12 h-12 rounded-[0.75rem] bg-accent/10 flex items-center justify-center text-accent mb-5">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3 class="font-heading text-lg font-bold leading-[1.2] tracking-[-0.02em] mb-2">Plumbing</h3>
+          <p class="text-sm text-light dark:text-light-dark mb-4">From leaky faucets to full pipe replacements. Emergency and scheduled plumbing services available.</p>
+          <a href="services.html" class="font-heading font-semibold text-sm text-accent inline-flex items-center gap-1.5 no-underline">Learn More <svg class="w-[1em] h-[1em]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="basis-full sm:basis-[calc(50%-0.75rem)] lg:basis-[calc(33.333%-1rem)] min-w-[280px] bg-bg dark:bg-bg-dark border border-border dark:border-border-dark rounded-[1rem] p-8 transition-all duration-[var(--ease)] hover:border-accent hover:-translate-y-[3px] hover:shadow-md dark:hover:shadow-md-dark fade-up">
+          <div class="w-12 h-12 rounded-[0.75rem] bg-accent/10 flex items-center justify-center text-accent mb-5">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <h3 class="font-heading text-lg font-bold leading-[1.2] tracking-[-0.02em] mb-2">Electrical</h3>
+          <p class="text-sm text-light dark:text-light-dark mb-4">Panel upgrades, rewiring, lighting installation, and electrical safety inspections by certified electricians.</p>
+          <a href="services.html" class="font-heading font-semibold text-sm text-accent inline-flex items-center gap-1.5 no-underline">Learn More <svg class="w-[1em] h-[1em]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="basis-full sm:basis-[calc(50%-0.75rem)] lg:basis-[calc(33.333%-1rem)] min-w-[280px] bg-bg dark:bg-bg-dark border border-border dark:border-border-dark rounded-[1rem] p-8 transition-all duration-[var(--ease)] hover:border-accent hover:-translate-y-[3px] hover:shadow-md dark:hover:shadow-md-dark fade-up">
+          <div class="w-12 h-12 rounded-[0.75rem] bg-accent/10 flex items-center justify-center text-accent mb-5">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+          </div>
+          <h3 class="font-heading text-lg font-bold leading-[1.2] tracking-[-0.02em] mb-2">Decks &amp; Patios</h3>
+          <p class="text-sm text-light dark:text-light-dark mb-4">Custom deck builds, patio installations, and outdoor living spaces designed to last.</p>
+          <a href="services.html" class="font-heading font-semibold text-sm text-accent inline-flex items-center gap-1.5 no-underline">Learn More <svg class="w-[1em] h-[1em]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="basis-full sm:basis-[calc(50%-0.75rem)] lg:basis-[calc(33.333%-1rem)] min-w-[280px] bg-bg dark:bg-bg-dark border border-border dark:border-border-dark rounded-[1rem] p-8 transition-all duration-[var(--ease)] hover:border-accent hover:-translate-y-[3px] hover:shadow-md dark:hover:shadow-md-dark fade-up">
+          <div class="w-12 h-12 rounded-[0.75rem] bg-accent/10 flex items-center justify-center text-accent mb-5">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3 class="font-heading text-lg font-bold leading-[1.2] tracking-[-0.02em] mb-2">Emergency Repairs</h3>
+          <p class="text-sm text-light dark:text-light-dark mb-4">24/7 emergency service for urgent repairs. Water damage, storm damage, and critical structural issues.</p>
+          <a href="services.html" class="font-heading font-semibold text-sm text-accent inline-flex items-center gap-1.5 no-underline">Learn More <svg class="w-[1em] h-[1em]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== ABOUT SNIPPET ====== -->
+  <section class="py-[clamp(3.5rem,7vw,7rem)]">
+    <div class="w-full max-w-[1200px] mx-auto px-[clamp(1rem,5vw,3rem)] flex flex-wrap gap-10 items-center">
+      <div class="basis-full md:basis-[calc(50%-1.25rem)] md:max-w-[calc(50%-1.25rem)] rounded-[1rem] overflow-hidden aspect-[4/3] bg-surface dark:bg-surface-dark fade-up">
+        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&h=600&fit=crop" alt="Contractor team discussing project plans" loading="lazy" class="w-full h-full object-cover">
+      </div>
+      <div class="basis-full md:basis-[calc(50%-1.25rem)] md:max-w-[calc(50%-1.25rem)] fade-up">
+        <p class="font-heading text-sm font-bold uppercase tracking-[0.08em] text-accent mb-3">About Us</p>
+        <h2 class="font-heading text-3xl font-bold leading-[1.2] tracking-[-0.02em] mb-4">Building Trust Since 2004</h2>
+        <p class="text-muted dark:text-muted-dark mb-4">Groundwork Contracting was founded on a simple principle: do honest work at a fair price. For over 20 years, we've helped homeowners and businesses throughout the Springfield area with everything from small repairs to major renovations.</p>
+        <p class="text-muted dark:text-muted-dark mb-6">As a family-owned business, we treat every project — and every client — like our own. That's why 85% of our work comes from repeat customers and referrals.</p>
+        <a href="about.html" class="inline-flex items-center gap-2 font-heading font-semibold text-sm px-[1.75rem] py-[0.85rem] rounded-[0.75rem] bg-transparent text-ink dark:text-ink-dark border-2 border-border dark:border-border-dark no-underline hover:border-accent hover:text-accent transition-all duration-[var(--ease)]">Learn Our Story</a>
+        <div class="flex flex-wrap gap-4 mt-8 max-[480px]:flex-col max-[480px]:gap-6">
+          <div class="basis-[calc(33.333%-0.667rem)] text-center max-[480px]:basis-full">
+            <div class="font-heading font-extrabold text-2xl text-accent leading-none">500+</div>
+            <div class="text-xs text-light dark:text-light-dark mt-1">Projects Completed</div>
+          </div>
+          <div class="basis-[calc(33.333%-0.667rem)] text-center max-[480px]:basis-full">
+            <div class="font-heading font-extrabold text-2xl text-accent leading-none">20+</div>
+            <div class="text-xs text-light dark:text-light-dark mt-1">Years in Business</div>
+          </div>
+          <div class="basis-[calc(33.333%-0.667rem)] text-center max-[480px]:basis-full">
+            <div class="font-heading font-extrabold text-2xl text-accent leading-none">4.9</div>
+            <div class="text-xs text-light dark:text-light-dark mt-1">Average Rating</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== TESTIMONIALS ====== -->
+  <section class="py-[clamp(3.5rem,7vw,7rem)] bg-surface dark:bg-surface-dark">
+    <div class="w-full max-w-[1200px] mx-auto px-[clamp(1rem,5vw,3rem)]">
+      <div class="text-center mb-12 fade-up">
+        <p class="font-heading text-sm font-bold uppercase tracking-[0.08em] text-accent mb-3">Testimonials</p>
+        <h2 class="font-heading text-3xl font-bold leading-[1.2] tracking-[-0.02em]">What Our Clients Say</h2>
+      </div>
+      <div class="flex flex-wrap gap-6">
+        <div class="basis-full md:basis-[calc(33.333%-1rem)] min-w-[300px] bg-bg dark:bg-bg-dark border border-border dark:border-border-dark rounded-[1rem] p-8 fade-up">
+          <div class="flex gap-[0.15rem] mb-4 text-[#F59E0B]">
+            <svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="text-base text-muted dark:text-muted-dark italic mb-5 leading-[1.7]">"They completely transformed our kitchen. The crew was professional, showed up on time every day, and the final result exceeded our expectations. Highly recommend."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full bg-surface dark:bg-surface-dark shrink-0"></div>
+            <div>
+              <div class="font-heading font-semibold text-sm text-ink dark:text-ink-dark">Sarah Mitchell</div>
+              <div class="text-xs text-light dark:text-light-dark">Kitchen Renovation — Springfield</div>
+            </div>
+          </div>
+        </div>
+        <div class="basis-full md:basis-[calc(33.333%-1rem)] min-w-[300px] bg-bg dark:bg-bg-dark border border-border dark:border-border-dark rounded-[1rem] p-8 fade-up">
+          <div class="flex gap-[0.15rem] mb-4 text-[#F59E0B]">
+            <svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="text-base text-muted dark:text-muted-dark italic mb-5 leading-[1.7]">"Called them for an emergency roof repair after a storm. They were at our house within hours and had it patched before the next rain. Fair pricing and excellent communication."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full bg-surface dark:bg-surface-dark shrink-0"></div>
+            <div>
+              <div class="font-heading font-semibold text-sm text-ink dark:text-ink-dark">James Rodriguez</div>
+              <div class="text-xs text-light dark:text-light-dark">Roof Repair — Shelbyville</div>
+            </div>
+          </div>
+        </div>
+        <div class="basis-full md:basis-[calc(33.333%-1rem)] min-w-[300px] bg-bg dark:bg-bg-dark border border-border dark:border-border-dark rounded-[1rem] p-8 fade-up">
+          <div class="flex gap-[0.15rem] mb-4 text-[#F59E0B]">
+            <svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="text-base text-muted dark:text-muted-dark italic mb-5 leading-[1.7]">"We've used Groundwork for three different projects over the years — bathroom remodel, deck build, and electrical upgrade. Consistently great work. They're our go-to contractor."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full bg-surface dark:bg-surface-dark shrink-0"></div>
+            <div>
+              <div class="font-heading font-semibold text-sm text-ink dark:text-ink-dark">Linda Chen</div>
+              <div class="text-xs text-light dark:text-light-dark">Multiple Projects — Capital City</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SERVICE AREAS ====== -->
+  <section class="py-[clamp(3.5rem,7vw,7rem)]">
+    <div class="w-full max-w-[1200px] mx-auto px-[clamp(1rem,5vw,3rem)]">
+      <div class="text-center mb-12 fade-up">
+        <p class="font-heading text-sm font-bold uppercase tracking-[0.08em] text-accent mb-3">Coverage</p>
+        <h2 class="font-heading text-3xl font-bold leading-[1.2] tracking-[-0.02em] mb-4">Areas We Serve</h2>
+        <p class="text-lg text-muted dark:text-muted-dark max-w-[600px] mx-auto">Proudly serving the greater Springfield metropolitan area and surrounding communities.</p>
+      </div>
+      <div class="flex flex-wrap gap-3 fade-up">
+        <div class="basis-[calc(50%-0.375rem)] sm:basis-[calc(33.333%-0.5rem)] md:basis-[calc(16.666%-0.625rem)] min-w-[180px] flex items-center gap-2 bg-bg dark:bg-bg-dark border border-border dark:border-border-dark px-5 py-3 rounded-[0.75rem] text-sm font-medium text-muted dark:text-muted-dark">
+          <svg class="w-4 h-4 text-accent shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Springfield
+        </div>
+        <div class="basis-[calc(50%-0.375rem)] sm:basis-[calc(33.333%-0.5rem)] md:basis-[calc(16.666%-0.625rem)] min-w-[180px] flex items-center gap-2 bg-bg dark:bg-bg-dark border border-border dark:border-border-dark px-5 py-3 rounded-[0.75rem] text-sm font-medium text-muted dark:text-muted-dark">
+          <svg class="w-4 h-4 text-accent shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Shelbyville
+        </div>
+        <div class="basis-[calc(50%-0.375rem)] sm:basis-[calc(33.333%-0.5rem)] md:basis-[calc(16.666%-0.625rem)] min-w-[180px] flex items-center gap-2 bg-bg dark:bg-bg-dark border border-border dark:border-border-dark px-5 py-3 rounded-[0.75rem] text-sm font-medium text-muted dark:text-muted-dark">
+          <svg class="w-4 h-4 text-accent shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Capital City
+        </div>
+        <div class="basis-[calc(50%-0.375rem)] sm:basis-[calc(33.333%-0.5rem)] md:basis-[calc(16.666%-0.625rem)] min-w-[180px] flex items-center gap-2 bg-bg dark:bg-bg-dark border border-border dark:border-border-dark px-5 py-3 rounded-[0.75rem] text-sm font-medium text-muted dark:text-muted-dark">
+          <svg class="w-4 h-4 text-accent shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Ogdenville
+        </div>
+        <div class="basis-[calc(50%-0.375rem)] sm:basis-[calc(33.333%-0.5rem)] md:basis-[calc(16.666%-0.625rem)] min-w-[180px] flex items-center gap-2 bg-bg dark:bg-bg-dark border border-border dark:border-border-dark px-5 py-3 rounded-[0.75rem] text-sm font-medium text-muted dark:text-muted-dark">
+          <svg class="w-4 h-4 text-accent shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> N. Haverbrook
+        </div>
+        <div class="basis-[calc(50%-0.375rem)] sm:basis-[calc(33.333%-0.5rem)] md:basis-[calc(16.666%-0.625rem)] min-w-[180px] flex items-center gap-2 bg-bg dark:bg-bg-dark border border-border dark:border-border-dark px-5 py-3 rounded-[0.75rem] text-sm font-medium text-muted dark:text-muted-dark">
+          <svg class="w-4 h-4 text-accent shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Brockway
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CTA BANNER ====== -->
+  <section class="py-[clamp(3.5rem,7vw,7rem)]">
+    <div class="w-full max-w-[1200px] mx-auto px-[clamp(1rem,5vw,3rem)]">
+      <div class="bg-accent rounded-[1rem] py-12 md:py-16 px-8 md:px-12 text-center text-white fade-up">
+        <h2 class="font-heading text-3xl font-bold leading-[1.2] tracking-[-0.02em] text-white mb-3">Ready to Start Your Project?</h2>
+        <p class="text-white/85 mb-6 max-w-[500px] mx-auto">Get a free, no-obligation estimate. We'll visit your property, discuss your needs, and provide transparent pricing.</p>
+        <div class="flex gap-3 justify-center flex-wrap">
+          <a href="contact.html" class="inline-flex items-center justify-center gap-2 font-heading font-semibold text-base px-[2.25rem] py-4 rounded-[0.75rem] bg-white text-ink no-underline hover:bg-surface hover:-translate-y-0.5 transition-all duration-[var(--ease)]">Get Free Estimate</a>
+          <a href="tel:+15551234567" class="inline-flex items-center justify-center gap-2 font-heading font-semibold text-base px-[2.25rem] py-4 rounded-[0.75rem] bg-transparent text-white border-2 border-white/30 no-underline hover:border-white/60 transition-all duration-[var(--ease)]">
+            <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            (555) 123-4567
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="bg-dark-bg dark:bg-dark-bg-dark text-white/70 pt-[clamp(3.5rem,7vw,7rem)] pb-8" role="contentinfo">
+    <div class="w-full max-w-[1200px] mx-auto px-[clamp(1rem,5vw,3rem)]">
+      <div class="flex flex-wrap gap-10 mb-12">
+        <div class="basis-full sm:basis-0 sm:grow-[2]">
+          <div class="font-heading font-extrabold text-[1.35rem] text-white mb-3">Ground<span class="text-accent">work</span></div>
+          <p class="text-sm leading-[1.7] max-w-[300px] mb-4">Professional contracting services for residential and commercial properties. Licensed, insured, and committed to quality craftsmanship.</p>
+          <p class="text-sm">License #: CBC-123456</p>
+        </div>
+        <div class="basis-[calc(50%-1.25rem)] sm:basis-0 sm:grow">
+          <h4 class="font-heading font-bold text-sm text-white uppercase tracking-[0.05em] mb-4">Services</h4>
+          <div class="flex flex-col gap-2.5">
+            <a href="services.html" class="text-sm text-white/70 no-underline hover:text-accent transition-colors">Home Renovations</a>
+            <a href="services.html" class="text-sm text-white/70 no-underline hover:text-accent transition-colors">Roofing</a>
+            <a href="services.html" class="text-sm text-white/70 no-underline hover:text-accent transition-colors">Plumbing</a>
+            <a href="services.html" class="text-sm text-white/70 no-underline hover:text-accent transition-colors">Electrical</a>
+            <a href="services.html" class="text-sm text-white/70 no-underline hover:text-accent transition-colors">Decks &amp; Patios</a>
+            <a href="services.html" class="text-sm text-white/70 no-underline hover:text-accent transition-colors">Emergency Repairs</a>
+          </div>
+        </div>
+        <div class="basis-[calc(50%-1.25rem)] sm:basis-0 sm:grow">
+          <h4 class="font-heading font-bold text-sm text-white uppercase tracking-[0.05em] mb-4">Company</h4>
+          <div class="flex flex-col gap-2.5">
+            <a href="about.html" class="text-sm text-white/70 no-underline hover:text-accent transition-colors">About Us</a>
+            <a href="gallery.html" class="text-sm text-white/70 no-underline hover:text-accent transition-colors">Projects</a>
+            <a href="contact.html" class="text-sm text-white/70 no-underline hover:text-accent transition-colors">Contact</a>
+            <a href="#" class="text-sm text-white/70 no-underline hover:text-accent transition-colors">Careers</a>
+          </div>
+        </div>
+        <div class="basis-full sm:basis-0 sm:grow">
+          <h4 class="font-heading font-bold text-sm text-white uppercase tracking-[0.05em] mb-4">Contact</h4>
+          <div class="flex flex-col gap-2.5">
+            <a href="tel:+15551234567" class="text-sm text-white/70 no-underline hover:text-accent transition-colors">(555) 123-4567</a>
+            <a href="mailto:info@groundwork.com" class="text-sm text-white/70 no-underline hover:text-accent transition-colors">info@groundwork.com</a>
+            <span class="text-sm">123 Main Street<br>Springfield, IL 62701</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-wrap justify-between gap-3 pt-6 border-t border-white/10 text-xs">
+        <span>&copy; 2026 Groundwork Contracting. All rights reserved.</span>
+        <span><a href="#" class="text-white/70 no-underline hover:text-accent">Privacy Policy</a> · <a href="#" class="text-white/70 no-underline hover:text-accent">Terms of Service</a></span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

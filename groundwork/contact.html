@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Groundwork Contracting</title>
+  <meta name="description" content="Get a free estimate for your project. Call us, fill out the form, or visit our office. Available 24/7 for emergencies.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --font-heading: 'DM Sans', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --color-bg: #FFFFFF;
+      --color-bg-dark: #0F1923;
+      --color-surface: #F5F5F5;
+      --color-surface-dark: #162231;
+      --color-dark-bg: #1B2432;
+      --color-dark-bg-dark: #0A1018;
+      --color-ink: #1B2432;
+      --color-ink-dark: #EAEAEA;
+      --color-muted: #4A5568;
+      --color-muted-dark: #A0AEC0;
+      --color-light: #718096;
+      --color-light-dark: #718096;
+      --color-accent: #E67E22;
+      --color-accent-dark: #CF6D17;
+      --color-accent-light: #F39C4A;
+      --color-border: #E2E8F0;
+      --color-border-dark: rgba(255, 255, 255, 0.1);
+      --color-border-light: #EDF2F7;
+      --color-border-light-dark: rgba(255, 255, 255, 0.06);
+      --color-nav-bg: rgba(255, 255, 255, 0.92);
+      --color-nav-bg-dark: rgba(15, 25, 35, 0.92);
+      --font-size-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --font-size-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --font-size-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --font-size-lg: clamp(1.125rem, 1rem + 0.5vw, 1.3rem);
+      --font-size-xl: clamp(1.25rem, 1rem + 1vw, 1.65rem);
+      --font-size-2xl: clamp(1.5rem, 1rem + 2vw, 2.25rem);
+      --font-size-3xl: clamp(1.875rem, 1rem + 3.5vw, 3rem);
+      --font-size-4xl: clamp(2.25rem, 1rem + 5vw, 3.75rem);
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+      --shadow-lg: 0 10px 30px rgba(0,0,0,0.12);
+      --shadow-sm-dark: 0 1px 3px rgba(0,0,0,0.3);
+      --shadow-md-dark: 0 4px 12px rgba(0,0,0,0.4);
+      --shadow-lg-dark: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    @variant dark (&:where(.dark, .dark *));
+  </style>
+  <script src="js/main.js" defer></script>
+</head>
+<body class="font-body text-base leading-[1.65] text-ink dark:text-ink-dark bg-bg dark:bg-bg-dark antialiased">
+
+  <!-- ====== HEADER ====== -->
+  <header class="site-header fixed top-0 left-0 w-full z-[100] bg-nav-bg dark:bg-nav-bg-dark backdrop-blur-[12px] border-b border-border-light dark:border-border-light-dark transition-all duration-[var(--ease)]" role="banner">
+    <div class="container flex items-center justify-between h-[4.25rem] w-full max-w-[1200px] mx-auto px-[clamp(1rem,5vw,3rem)]">
+      <a href="index.html" class="font-heading font-extrabold text-[1.35rem] tracking-[-0.02em] text-ink dark:text-ink-dark no-underline">Ground<span class="text-accent">work</span></a>
+      <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
+        <a href="index.html" class="nav-link font-heading text-sm font-medium text-muted dark:text-muted-dark hover:text-accent no-underline transition-colors duration-[var(--ease)]">Home</a>
+        <a href="services.html" class="nav-link font-heading text-sm font-medium text-muted dark:text-muted-dark hover:text-accent no-underline transition-colors duration-[var(--ease)]">Services</a>
+        <a href="about.html" class="nav-link font-heading text-sm font-medium text-muted dark:text-muted-dark hover:text-accent no-underline transition-colors duration-[var(--ease)]">About</a>
+        <a href="gallery.html" class="nav-link font-heading text-sm font-medium text-muted dark:text-muted-dark hover:text-accent no-underline transition-colors duration-[var(--ease)]">Projects</a>
+        <a href="contact.html" class="nav-link font-heading text-sm font-medium text-accent no-underline transition-colors duration-[var(--ease)]">Contact</a>
+      </nav>
+      <div class="flex items-center gap-4">
+        <a href="tel:+15551234567" class="flex items-center gap-1.5 font-heading font-bold text-ink dark:text-ink-dark text-sm no-underline" aria-label="Call us">
+          <svg class="w-[1.1em] h-[1.1em] text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          (555) 123-4567
+        </a>
+        <button class="theme-toggle w-9 h-9 flex items-center justify-center rounded-[0.75rem] border border-border dark:border-border-dark cursor-pointer hover:border-accent transition-colors duration-[var(--ease)]" aria-label="Toggle dark mode">
+          <svg class="w-[18px] h-[18px] hidden dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="w-[18px] h-[18px] block dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <a href="contact.html" class="hidden md:inline-flex items-center gap-2 font-heading font-semibold text-sm px-[1.75rem] py-[0.85rem] rounded-[0.75rem] bg-accent text-white no-underline hover:bg-accent-dark hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(230,126,34,0.35)] transition-all duration-[var(--ease)]">Free Estimate</a>
+      </div>
+      <button class="hamburger flex md:hidden flex-col gap-[5px] p-1 cursor-pointer" aria-label="Menu" aria-expanded="false">
+        <span class="block w-6 h-0.5 bg-ink dark:bg-ink-dark rounded-sm relative transition-all duration-[var(--ease)]"></span>
+        <span class="block w-6 h-0.5 bg-ink dark:bg-ink-dark rounded-sm"></span>
+        <span class="block w-6 h-0.5 bg-ink dark:bg-ink-dark rounded-sm"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile nav -->
+  <nav class="mobile-nav hidden fixed inset-0 top-[4.25rem] z-[99] bg-bg dark:bg-bg-dark p-[clamp(1rem,5vw,3rem)] pt-8 flex-col gap-2" aria-label="Mobile navigation">
+    <a href="index.html" class="font-heading text-xl font-semibold text-ink dark:text-ink-dark py-3 border-b border-border-light dark:border-border-light-dark no-underline hover:text-accent">Home</a>
+    <a href="services.html" class="font-heading text-xl font-semibold text-ink dark:text-ink-dark py-3 border-b border-border-light dark:border-border-light-dark no-underline hover:text-accent">Services</a>
+    <a href="about.html" class="font-heading text-xl font-semibold text-ink dark:text-ink-dark py-3 border-b border-border-light dark:border-border-light-dark no-underline hover:text-accent">About</a>
+    <a href="gallery.html" class="font-heading text-xl font-semibold text-ink dark:text-ink-dark py-3 border-b border-border-light dark:border-border-light-dark no-underline hover:text-accent">Projects</a>
+    <a href="contact.html" class="font-heading text-xl font-semibold text-ink dark:text-ink-dark py-3 border-b border-border-light dark:border-border-light-dark no-underline hover:text-accent">Contact</a>
+    <a href="tel:+15551234567" class="mt-4 inline-flex items-center justify-center gap-2 font-heading font-semibold text-base px-[2.25rem] py-4 rounded-[0.75rem] bg-accent text-white no-underline">📞 (555) 123-4567</a>
+    <a href="contact.html" class="inline-flex items-center justify-center gap-2 font-heading font-semibold text-base px-[2.25rem] py-4 rounded-[0.75rem] bg-transparent text-ink dark:text-ink-dark border-2 border-border dark:border-border-dark no-underline">Get Free Estimate</a>
+  </nav>
+
+  <!-- ====== PAGE HERO ====== -->
+  <section class="pt-32 md:pt-40 pb-10 bg-surface dark:bg-surface-dark">
+    <div class="w-full max-w-[1200px] mx-auto px-[clamp(1rem,5vw,3rem)] fade-up">
+      <div class="flex items-center gap-2 text-sm text-muted dark:text-muted-dark mb-4">
+        <a href="index.html" class="text-muted dark:text-muted-dark no-underline hover:text-accent transition-colors">Home</a>
+        <span class="text-light dark:text-light-dark">/</span>
+        <span class="text-ink dark:text-ink-dark font-medium">Contact</span>
+      </div>
+      <h1 class="font-heading text-4xl font-bold leading-[1.2] tracking-[-0.03em] mb-4">Contact Us</h1>
+      <p class="text-lg text-muted dark:text-muted-dark max-w-[600px]">Ready to start your project? Get a free, no-obligation estimate today.</p>
+    </div>
+  </section>
+
+  <!-- ====== CONTACT SECTION ====== -->
+  <section class="py-[clamp(3.5rem,7vw,7rem)]">
+    <div class="w-full max-w-[1200px] mx-auto px-[clamp(1rem,5vw,3rem)] flex flex-wrap gap-12">
+
+      <!-- LEFT: Info -->
+      <div class="basis-full md:basis-[calc(42%-1.5rem)] md:max-w-[calc(42%-1.5rem)] fade-up">
+        <h2 class="font-heading text-2xl font-bold leading-[1.2] tracking-[-0.02em] mb-6">Get in Touch</h2>
+
+        <div class="flex items-start gap-4 mb-6">
+          <div class="w-11 h-11 rounded-[0.75rem] bg-accent/10 flex items-center justify-center text-accent shrink-0">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="font-heading font-semibold text-sm text-ink dark:text-ink-dark mb-0.5">Phone</div>
+            <a href="tel:+15551234567" class="text-sm text-accent no-underline hover:underline">(555) 123-4567</a>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 mb-6">
+          <div class="w-11 h-11 rounded-[0.75rem] bg-accent/10 flex items-center justify-center text-accent shrink-0">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div class="font-heading font-semibold text-sm text-ink dark:text-ink-dark mb-0.5">Email</div>
+            <a href="mailto:info@groundwork.com" class="text-sm text-accent no-underline hover:underline">info@groundwork.com</a>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 mb-6">
+          <div class="w-11 h-11 rounded-[0.75rem] bg-accent/10 flex items-center justify-center text-accent shrink-0">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="font-heading font-semibold text-sm text-ink dark:text-ink-dark mb-0.5">Office</div>
+            <p class="text-sm text-muted dark:text-muted-dark">123 Main Street<br>Springfield, IL 62701</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 mb-8">
+          <div class="w-11 h-11 rounded-[0.75rem] bg-accent/10 flex items-center justify-center text-accent shrink-0">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div>
+            <div class="font-heading font-semibold text-sm text-ink dark:text-ink-dark mb-0.5">Emergency Line</div>
+            <a href="tel:+15559876543" class="text-sm text-accent no-underline hover:underline">(555) 987-6543</a> <span class="text-sm text-muted dark:text-muted-dark">— 24/7</span>
+          </div>
+        </div>
+
+        <h3 class="font-heading text-lg font-bold leading-[1.2] tracking-[-0.02em] mb-3">Business Hours</h3>
+        <div class="border border-border dark:border-border-dark rounded-[0.75rem] overflow-hidden mb-8">
+          <div class="flex justify-between px-5 py-3 text-sm border-b border-border dark:border-border-dark">
+            <span class="text-ink dark:text-ink-dark font-medium">Monday – Friday</span>
+            <span class="text-muted dark:text-muted-dark">7:00 AM – 6:00 PM</span>
+          </div>
+          <div class="flex justify-between px-5 py-3 text-sm border-b border-border dark:border-border-dark">
+            <span class="text-ink dark:text-ink-dark font-medium">Saturday</span>
+            <span class="text-muted dark:text-muted-dark">8:00 AM – 2:00 PM</span>
+          </div>
+          <div class="flex justify-between px-5 py-3 text-sm border-b border-border dark:border-border-dark">
+            <span class="text-ink dark:text-ink-dark font-medium">Sunday</span>
+            <span class="text-muted dark:text-muted-dark">Closed</span>
+          </div>
+          <div class="flex justify-between px-5 py-3 text-sm">
+            <span class="text-ink dark:text-ink-dark font-medium">Emergencies</span>
+            <span class="text-accent font-semibold">24/7</span>
+          </div>
+        </div>
+
+        <!-- Map placeholder -->
+        <div class="w-full aspect-[16/10] rounded-[1rem] bg-surface dark:bg-surface-dark border border-border dark:border-border-dark flex items-center justify-center text-sm text-light dark:text-light-dark">
+          <span>Google Maps embed — replace with your address</span>
+        </div>
+      </div>
+
+      <!-- RIGHT: Form -->
+      <div class="basis-full md:basis-[calc(58%-1.5rem)] md:max-w-[calc(58%-1.5rem)] fade-up">
+        <div class="bg-surface dark:bg-surface-dark border border-border dark:border-border-dark rounded-[1rem] p-8 md:p-10">
+          <h3 class="font-heading text-xl font-bold leading-[1.2] tracking-[-0.02em] mb-2">Request a Free Estimate</h3>
+          <p class="text-sm text-light dark:text-light-dark mb-6">Fill out the form below and we'll get back to you within 24 hours.</p>
+
+          <form action="#" method="POST" class="flex flex-col gap-5">
+            <div class="flex flex-wrap gap-5">
+              <div class="basis-full sm:basis-[calc(50%-0.625rem)] flex flex-col gap-1.5">
+                <label for="first-name" class="font-heading font-semibold text-sm text-ink dark:text-ink-dark">First Name *</label>
+                <input type="text" id="first-name" name="first_name" required placeholder="John" class="w-full px-4 py-3 rounded-[0.75rem] border border-border dark:border-border-dark bg-bg dark:bg-bg-dark text-ink dark:text-ink-dark text-sm placeholder:text-light dark:placeholder:text-light-dark focus:outline-none focus:border-accent transition-colors">
+              </div>
+              <div class="basis-full sm:basis-[calc(50%-0.625rem)] flex flex-col gap-1.5">
+                <label for="last-name" class="font-heading font-semibold text-sm text-ink dark:text-ink-dark">Last Name *</label>
+                <input type="text" id="last-name" name="last_name" required placeholder="Smith" class="w-full px-4 py-3 rounded-[0.75rem] border border-border dark:border-border-dark bg-bg dark:bg-bg-dark text-ink dark:text-ink-dark text-sm placeholder:text-light dark:placeholder:text-light-dark focus:outline-none focus:border-accent transition-colors">
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-5">
+              <div class="basis-full sm:basis-[calc(50%-0.625rem)] flex flex-col gap-1.5">
+                <label for="email" class="font-heading font-semibold text-sm text-ink dark:text-ink-dark">Email *</label>
+                <input type="email" id="email" name="email" required placeholder="john@example.com" class="w-full px-4 py-3 rounded-[0.75rem] border border-border dark:border-border-dark bg-bg dark:bg-bg-dark text-ink dark:text-ink-dark text-sm placeholder:text-light dark:placeholder:text-light-dark focus:outline-none focus:border-accent transition-colors">
+              </div>
+              <div class="basis-full sm:basis-[calc(50%-0.625rem)] flex flex-col gap-1.5">
+                <label for="phone" class="font-heading font-semibold text-sm text-ink dark:text-ink-dark">Phone *</label>
+                <input type="tel" id="phone" name="phone" required placeholder="(555) 000-0000" class="w-full px-4 py-3 rounded-[0.75rem] border border-border dark:border-border-dark bg-bg dark:bg-bg-dark text-ink dark:text-ink-dark text-sm placeholder:text-light dark:placeholder:text-light-dark focus:outline-none focus:border-accent transition-colors">
+              </div>
+            </div>
+            <div class="flex flex-col gap-1.5">
+              <label for="service" class="font-heading font-semibold text-sm text-ink dark:text-ink-dark">Service Needed</label>
+              <select id="service" name="service" class="w-full px-4 py-3 rounded-[0.75rem] border border-border dark:border-border-dark bg-bg dark:bg-bg-dark text-ink dark:text-ink-dark text-sm focus:outline-none focus:border-accent transition-colors appearance-none">
+                <option value="">Select a service...</option>
+                <option value="renovation">Home Renovation</option>
+                <option value="roofing">Roofing</option>
+                <option value="plumbing">Plumbing</option>
+                <option value="electrical">Electrical</option>
+                <option value="deck">Decks &amp; Patios</option>
+                <option value="emergency">Emergency Repair</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="flex flex-col gap-1.5">
+              <label for="address" class="font-heading font-semibold text-sm text-ink dark:text-ink-dark">Project Address</label>
+              <input type="text" id="address" name="address" placeholder="123 Your Street, City, IL" class="w-full px-4 py-3 rounded-[0.75rem] border border-border dark:border-border-dark bg-bg dark:bg-bg-dark text-ink dark:text-ink-dark text-sm placeholder:text-light dark:placeholder:text-light-dark focus:outline-none focus:border-accent transition-colors">
+            </div>
+            <div class="flex flex-col gap-1.5">
+              <label for="message" class="font-heading font-semibold text-sm text-ink dark:text-ink-dark">Project Details</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us about your project — what needs to be done, timeline, any special requirements..." class="w-full px-4 py-3 rounded-[0.75rem] border border-border dark:border-border-dark bg-bg dark:bg-bg-dark text-ink dark:text-ink-dark text-sm placeholder:text-light dark:placeholder:text-light-dark focus:outline-none focus:border-accent transition-colors resize-vertical"></textarea>
+            </div>
+            <button type="submit" class="w-full inline-flex items-center justify-center gap-2 font-heading font-semibold text-base px-[2.25rem] py-4 rounded-[0.75rem] bg-accent text-white no-underline hover:bg-accent-dark hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(230,126,34,0.35)] transition-all duration-[var(--ease)] cursor-pointer border-0">Send Request</button>
+            <p class="text-xs text-light dark:text-light-dark text-center">We respect your privacy. Your information will never be shared.</p>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="bg-dark-bg dark:bg-dark-bg-dark text-white/70 pt-[clamp(3.5rem,7vw,7rem)] pb-8" role="contentinfo">
+    <div class="w-full max-w-[1200px] mx-auto px-[clamp(1rem,5vw,3rem)]">
+      <div class="flex flex-wrap gap-10 mb-12">
+        <div class="basis-full sm:basis-0 sm:grow-[2]">
+          <div class="font-heading font-extrabold text-[1.35rem] text-white mb-3">Ground<span class="text-accent">work</span></div>
+          <p class="text-sm leading-[1.7] max-w-[300px] mb-4">Professional contracting services for residential and commercial properties. Licensed, insured, and committed to quality craftsmanship.</p>
+          <p class="text-sm">License #: CBC-123456</p>
+        </div>
+        <div class="basis-[calc(50%-1.25rem)] sm:basis-0 sm:grow">
+          <h4 class="font-heading font-bold text-sm text-white uppercase tracking-[0.05em] mb-4">Services</h4>
+          <div class="flex flex-col gap-2.5">
+            <a href="services.html" class="text-sm text-white/70 no-underline hover:text-accent transition-colors">Home Renovations</a>
+            <a href="services.html" class="text-sm text-white/70 no-underline hover:text-accent transition-colors">Roofing</a>
+            <a href="services.html" class="text-sm text-white/70 no-underline hover:text-accent transition-colors">Plumbing</a>
+            <a href="services.html" class="text-sm text-white/70 no-underline hover:text-accent transition-colors">Electrical</a>
+            <a href="services.html" class="text-sm text-white/70 no-underline hover:text-accent transition-colors">Decks &amp; Patios</a>
+            <a href="services.html" class="text-sm text-white/70 no-underline hover:text-accent transition-colors">Emergency Repairs</a>
+          </div>
+        </div>
+        <div class="basis-[calc(50%-1.25rem)] sm:basis-0 sm:grow">
+          <h4 class="font-heading font-bold text-sm text-white uppercase tracking-[0.05em] mb-4">Company</h4>
+          <div class="flex flex-col gap-2.5">
+            <a href="about.html" class="text-sm text-white/70 no-underline hover:text-accent transition-colors">About Us</a>
+            <a href="gallery.html" class="text-sm text-white/70 no-underline hover:text-accent transition-colors">Projects</a>
+            <a href="contact.html" class="text-sm text-white/70 no-underline hover:text-accent transition-colors">Contact</a>
+            <a href="#" class="text-sm text-white/70 no-underline hover:text-accent transition-colors">Careers</a>
+          </div>
+        </div>
+        <div class="basis-full sm:basis-0 sm:grow">
+          <h4 class="font-heading font-bold text-sm text-white uppercase tracking-[0.05em] mb-4">Contact</h4>
+          <div class="flex flex-col gap-2.5">
+            <a href="tel:+15551234567" class="text-sm text-white/70 no-underline hover:text-accent transition-colors">(555) 123-4567</a>
+            <a href="mailto:info@groundwork.com" class="text-sm text-white/70 no-underline hover:text-accent transition-colors">info@groundwork.com</a>
+            <span class="text-sm">123 Main Street<br>Springfield, IL 62701</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-wrap justify-between gap-3 pt-6 border-t border-white/10 text-xs">
+        <span>&copy; 2026 Groundwork Contracting. All rights reserved.</span>
+        <span><a href="#" class="text-white/70 no-underline hover:text-accent">Privacy Policy</a> · <a href="#" class="text-white/70 no-underline hover:text-accent">Terms of Service</a></span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Launchpad — Ship Faster, Scale Smarter</title>
+  <meta name="description" content="The all-in-one platform for modern teams. Analytics, automation, and AI — unified.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>L</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --font-heading: 'Space Grotesk', system-ui, sans-serif;
+      --font-body: 'Inter', system-ui, sans-serif;
+      --color-bg: #ffffff;
+      --color-bg-dark: #0f1729;
+      --color-surface: #fafbfc;
+      --color-surface-dark: #1a2238;
+      --color-ink: #1f2937;
+      --color-ink-dark: #e5e7eb;
+      --color-muted: #6b7280;
+      --color-muted-dark: #9ca3af;
+      --color-brand: #4f46e5;
+      --color-brand-dark: #818cf8;
+      --color-brand-hover: #4338ca;
+      --color-brand-hover-dark: #6366f1;
+      --color-line: #f3f4f6;
+      --color-line-dark: rgba(255, 255, 255, 0.05);
+      --color-nav-bg: rgba(255, 255, 255, 0.8);
+      --color-nav-bg-dark: rgba(15, 23, 41, 0.8);
+    }
+    @variant dark (&:where(.dark, .dark *));
+  </style>
+  <style>
+    html { scroll-behavior: smooth; }
+    .gradient-hero { background: linear-gradient(135deg, #0f1729 0%, #1e1b4b 40%, #312e81 70%, #4338ca 100%); }
+    .gradient-text { background: linear-gradient(135deg, #818cf8, #c084fc, #f472b6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .glow { box-shadow: 0 0 80px rgba(99, 102, 241, 0.15), 0 0 160px rgba(99, 102, 241, 0.05); }
+    .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+    .dark .card-hover:hover { box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .pricing-popular { position: relative; }
+    .pricing-popular::before { content: ''; position: absolute; inset: -2px; border-radius: 1rem; background: linear-gradient(135deg, #6366f1, #c084fc, #f472b6); z-index: -1; }
+    /* Theme toggle icons */
+    .icon-moon { display: none; }
+    .dark .icon-sun { display: none; }
+    .dark .icon-moon { display: block; }
+  </style>
+</head>
+<body class="font-body antialiased text-ink dark:text-ink-dark bg-bg dark:bg-bg-dark">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-nav-bg dark:bg-nav-bg-dark backdrop-blur-xl border-b border-line dark:border-line-dark">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#" class="font-heading font-bold text-xl text-ink dark:text-ink-dark flex items-center gap-2">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="6" fill="#4f46e5"/><path d="M7 17V7l5 10L17 7v10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Launchpad
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-sm text-muted dark:text-muted-dark">
+        <a href="#features" class="hover:text-ink dark:hover:text-ink-dark transition-colors">Features</a>
+        <a href="#pricing" class="hover:text-ink dark:hover:text-ink-dark transition-colors">Pricing</a>
+        <a href="#testimonials" class="hover:text-ink dark:hover:text-ink-dark transition-colors">Testimonials</a>
+        <a href="#faq" class="hover:text-ink dark:hover:text-ink-dark transition-colors">FAQ</a>
+      </div>
+      <div class="hidden md:flex items-center gap-3">
+        <button class="theme-toggle flex items-center justify-center w-9 h-9 rounded-full hover:bg-surface dark:hover:bg-surface-dark transition-colors cursor-pointer" aria-label="Toggle dark mode">
+          <svg class="icon-sun w-[18px] h-[18px] fill-none stroke-muted dark:stroke-muted-dark" style="stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon w-[18px] h-[18px] fill-none stroke-muted dark:stroke-muted-dark" style="stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="#" class="text-sm text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors px-4 py-2">Log in</a>
+        <a href="#" class="text-sm text-white bg-brand dark:bg-brand-dark hover:bg-brand-hover dark:hover:bg-brand-hover-dark px-5 py-2.5 rounded-lg transition-colors font-medium">Start Free</a>
+      </div>
+      <button id="menuToggle" class="md:hidden text-muted dark:text-muted-dark" aria-label="Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden border-t border-line dark:border-line-dark bg-bg dark:bg-bg-dark">
+      <div class="px-6 py-5 flex flex-col gap-4 text-sm text-muted dark:text-muted-dark">
+        <a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#testimonials">Testimonials</a><a href="#faq">FAQ</a>
+        <a href="#" class="text-white bg-brand dark:bg-brand-dark text-center py-2.5 rounded-lg font-medium mt-2">Start Free</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="gradient-hero pt-32 pb-24 lg:pt-44 lg:pb-36 text-center text-white relative overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.04]" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2260%22 height=%2260%22><line x1=%220%22 y1=%2260%22 x2=%2260%22 y2=%2260%22 stroke=%22white%22 stroke-width=%220.5%22/><line x1=%2260%22 y1=%220%22 x2=%2260%22 y2=%2260%22 stroke=%22white%22 stroke-width=%220.5%22/></svg>');"></div>
+      <div class="max-w-4xl mx-auto px-6 relative">
+        <div class="inline-flex items-center gap-2 text-xs font-medium bg-white/10 border border-white/10 rounded-full px-4 py-1.5 mb-8 backdrop-blur-sm">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          Now in public beta
+        </div>
+        <h1 class="font-heading text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.05] mb-6">
+          Ship faster,<br><span class="gradient-text">scale smarter</span>
+        </h1>
+        <p class="text-lg lg:text-xl text-indigo-100/70 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+          The all-in-one platform for modern teams. Analytics, automation, and AI — unified in a single workspace.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#" class="w-full sm:w-auto text-sm font-medium text-brand-hover bg-white hover:bg-gray-50 px-8 py-3.5 rounded-lg transition-colors">Start Free Trial</a>
+          <a href="#" class="w-full sm:w-auto text-sm font-medium text-white border border-white/20 hover:bg-white/10 px-8 py-3.5 rounded-lg transition-colors flex items-center justify-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Watch Demo
+          </a>
+        </div>
+        <div class="mt-16 glow rounded-xl overflow-hidden border border-white/10">
+          <img src="https://picsum.photos/1200/680?random=30" alt="Dashboard preview" class="w-full block">
+        </div>
+      </div>
+    </section>
+
+    <!-- Logos -->
+    <section class="py-16 border-b border-line dark:border-line-dark">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <p class="text-xs tracking-[0.2em] uppercase text-muted dark:text-muted-dark mb-8">Trusted by forward-thinking teams</p>
+        <div class="flex flex-wrap items-center justify-center gap-x-12 gap-y-6 text-muted/40 dark:text-muted-dark/40 text-lg font-heading font-bold">
+          <span>Stripe</span><span>Notion</span><span>Linear</span><span>Vercel</span><span>Figma</span><span>Raycast</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="py-24 lg:py-32">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16 fade-in">
+          <p class="text-brand dark:text-brand-dark text-sm font-semibold tracking-wide uppercase mb-3">Features</p>
+          <h2 class="font-heading text-3xl lg:text-4xl font-bold text-ink dark:text-ink-dark mb-4">Everything you need, nothing you don't</h2>
+          <p class="text-muted dark:text-muted-dark leading-relaxed">Built from the ground up for speed, clarity, and collaboration.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 fade-in">
+          <div class="bg-surface dark:bg-surface-dark rounded-xl p-8 card-hover border border-line dark:border-line-dark">
+            <div class="w-10 h-10 rounded-lg bg-indigo-50 dark:bg-indigo-900/30 flex items-center justify-center mb-5">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h3 class="font-heading font-semibold text-ink dark:text-ink-dark mb-2">Real-time Analytics</h3>
+            <p class="text-sm text-muted dark:text-muted-dark leading-relaxed">Track every metric that matters with sub-second latency. Dashboards update as events happen.</p>
+          </div>
+          <div class="bg-surface dark:bg-surface-dark rounded-xl p-8 card-hover border border-line dark:border-line-dark">
+            <div class="w-10 h-10 rounded-lg bg-purple-50 dark:bg-purple-900/30 flex items-center justify-center mb-5">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/></svg>
+            </div>
+            <h3 class="font-heading font-semibold text-ink dark:text-ink-dark mb-2">AI Automation</h3>
+            <p class="text-sm text-muted dark:text-muted-dark leading-relaxed">Intelligent workflows that learn your patterns. Automate the repetitive, focus on what matters.</p>
+          </div>
+          <div class="bg-surface dark:bg-surface-dark rounded-xl p-8 card-hover border border-line dark:border-line-dark">
+            <div class="w-10 h-10 rounded-lg bg-pink-50 dark:bg-pink-900/30 flex items-center justify-center mb-5">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#db2777" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <h3 class="font-heading font-semibold text-ink dark:text-ink-dark mb-2">Team Collaboration</h3>
+            <p class="text-sm text-muted dark:text-muted-dark leading-relaxed">Shared workspaces, comments, and real-time cursors. Your team, always in sync.</p>
+          </div>
+          <div class="bg-surface dark:bg-surface-dark rounded-xl p-8 card-hover border border-line dark:border-line-dark">
+            <div class="w-10 h-10 rounded-lg bg-emerald-50 dark:bg-emerald-900/30 flex items-center justify-center mb-5">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+            </div>
+            <h3 class="font-heading font-semibold text-ink dark:text-ink-dark mb-2">Enterprise Security</h3>
+            <p class="text-sm text-muted dark:text-muted-dark leading-relaxed">SOC 2 Type II certified. SSO, RBAC, and audit logs built in from day one.</p>
+          </div>
+          <div class="bg-surface dark:bg-surface-dark rounded-xl p-8 card-hover border border-line dark:border-line-dark">
+            <div class="w-10 h-10 rounded-lg bg-amber-50 dark:bg-amber-900/30 flex items-center justify-center mb-5">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <h3 class="font-heading font-semibold text-ink dark:text-ink-dark mb-2">Smart Notifications</h3>
+            <p class="text-sm text-muted dark:text-muted-dark leading-relaxed">AI-prioritized alerts. Get notified about what matters, silence the noise.</p>
+          </div>
+          <div class="bg-surface dark:bg-surface-dark rounded-xl p-8 card-hover border border-line dark:border-line-dark">
+            <div class="w-10 h-10 rounded-lg bg-cyan-50 dark:bg-cyan-900/30 flex items-center justify-center mb-5">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0891b2" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3 class="font-heading font-semibold text-ink dark:text-ink-dark mb-2">Developer API</h3>
+            <p class="text-sm text-muted dark:text-muted-dark leading-relaxed">RESTful API with SDKs for every major language. Build custom integrations in minutes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social proof stat bar -->
+    <section class="bg-bg-dark text-white py-16">
+      <div class="max-w-5xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center fade-in">
+        <div><p class="font-heading text-4xl font-bold gradient-text">10k+</p><p class="text-sm text-gray-400 mt-1">Active teams</p></div>
+        <div><p class="font-heading text-4xl font-bold gradient-text">99.99%</p><p class="text-sm text-gray-400 mt-1">Uptime SLA</p></div>
+        <div><p class="font-heading text-4xl font-bold gradient-text">2.4B</p><p class="text-sm text-gray-400 mt-1">Events processed</p></div>
+        <div><p class="font-heading text-4xl font-bold gradient-text">4.9/5</p><p class="text-sm text-gray-400 mt-1">G2 rating</p></div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-24 lg:py-32">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16 fade-in">
+          <p class="text-brand dark:text-brand-dark text-sm font-semibold tracking-wide uppercase mb-3">Pricing</p>
+          <h2 class="font-heading text-3xl lg:text-4xl font-bold text-ink dark:text-ink-dark mb-4">Simple, transparent pricing</h2>
+          <p class="text-muted dark:text-muted-dark">Start free. Upgrade when you're ready.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6 fade-in">
+          <!-- Starter -->
+          <div class="bg-bg dark:bg-surface-dark rounded-2xl border border-line dark:border-line-dark p-8 flex flex-col">
+            <h3 class="font-heading font-semibold text-ink dark:text-ink-dark mb-1">Starter</h3>
+            <p class="text-sm text-muted dark:text-muted-dark mb-6">For individuals and small projects</p>
+            <div class="mb-6"><span class="font-heading text-4xl font-bold text-ink dark:text-ink-dark">$0</span><span class="text-muted dark:text-muted-dark text-sm">/month</span></div>
+            <ul class="space-y-3 text-sm text-muted dark:text-muted-dark mb-8 flex-1">
+              <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-emerald-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Up to 3 team members</li>
+              <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-emerald-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>10k events/month</li>
+              <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-emerald-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Basic analytics</li>
+              <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-emerald-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Community support</li>
+            </ul>
+            <a href="#" class="block text-center text-sm font-medium text-brand dark:text-brand-dark border border-indigo-200 dark:border-indigo-800 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 py-3 rounded-lg transition-colors">Get Started</a>
+          </div>
+          <!-- Pro -->
+          <div class="pricing-popular bg-bg dark:bg-surface-dark rounded-2xl p-8 flex flex-col">
+            <div class="flex items-center justify-between mb-1">
+              <h3 class="font-heading font-semibold text-ink dark:text-ink-dark">Pro</h3>
+              <span class="text-xs font-medium text-white bg-brand dark:bg-brand-dark px-2.5 py-0.5 rounded-full">Popular</span>
+            </div>
+            <p class="text-sm text-muted dark:text-muted-dark mb-6">For growing teams</p>
+            <div class="mb-6"><span class="font-heading text-4xl font-bold text-ink dark:text-ink-dark">$29</span><span class="text-muted dark:text-muted-dark text-sm">/seat/month</span></div>
+            <ul class="space-y-3 text-sm text-muted dark:text-muted-dark mb-8 flex-1">
+              <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-emerald-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Unlimited team members</li>
+              <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-emerald-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>1M events/month</li>
+              <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-emerald-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Advanced analytics + AI</li>
+              <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-emerald-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Priority support</li>
+              <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-emerald-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Custom integrations</li>
+            </ul>
+            <a href="#" class="block text-center text-sm font-medium text-white bg-brand dark:bg-brand-dark hover:bg-brand-hover dark:hover:bg-brand-hover-dark py-3 rounded-lg transition-colors">Start Free Trial</a>
+          </div>
+          <!-- Enterprise -->
+          <div class="bg-bg dark:bg-surface-dark rounded-2xl border border-line dark:border-line-dark p-8 flex flex-col">
+            <h3 class="font-heading font-semibold text-ink dark:text-ink-dark mb-1">Enterprise</h3>
+            <p class="text-sm text-muted dark:text-muted-dark mb-6">For large organizations</p>
+            <div class="mb-6"><span class="font-heading text-4xl font-bold text-ink dark:text-ink-dark">Custom</span></div>
+            <ul class="space-y-3 text-sm text-muted dark:text-muted-dark mb-8 flex-1">
+              <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-emerald-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Everything in Pro</li>
+              <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-emerald-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Unlimited events</li>
+              <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-emerald-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>SSO & SAML</li>
+              <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-emerald-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Dedicated account manager</li>
+              <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-0.5 text-emerald-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>99.99% SLA</li>
+            </ul>
+            <a href="#" class="block text-center text-sm font-medium text-brand dark:text-brand-dark border border-indigo-200 dark:border-indigo-800 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 py-3 rounded-lg transition-colors">Contact Sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-24 lg:py-32 bg-surface dark:bg-surface-dark">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16 fade-in">
+          <p class="text-brand dark:text-brand-dark text-sm font-semibold tracking-wide uppercase mb-3">Testimonials</p>
+          <h2 class="font-heading text-3xl lg:text-4xl font-bold text-ink dark:text-ink-dark">Loved by teams everywhere</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6 fade-in">
+          <div class="bg-bg dark:bg-bg-dark rounded-xl p-8 border border-line dark:border-line-dark">
+            <div class="flex gap-1 mb-4">
+              <svg class="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p class="text-muted dark:text-muted-dark text-sm leading-relaxed mb-6">"Launchpad replaced three separate tools for us. The AI insights alone saved our team 10 hours a week. Absolute game changer."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center text-sm font-semibold text-brand dark:text-brand-dark">SK</div>
+              <div><p class="text-sm font-medium text-ink dark:text-ink-dark">Sarah Kim</p><p class="text-xs text-muted dark:text-muted-dark">VP Engineering, Astra</p></div>
+            </div>
+          </div>
+          <div class="bg-bg dark:bg-bg-dark rounded-xl p-8 border border-line dark:border-line-dark">
+            <div class="flex gap-1 mb-4">
+              <svg class="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p class="text-muted dark:text-muted-dark text-sm leading-relaxed mb-6">"The real-time dashboards are incredible. We can see exactly what's happening across all our products at a glance. Best analytics tool we've used."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/50 flex items-center justify-center text-sm font-semibold text-purple-700 dark:text-purple-400">MR</div>
+              <div><p class="text-sm font-medium text-ink dark:text-ink-dark">Marcus Rodriguez</p><p class="text-xs text-muted dark:text-muted-dark">CTO, Luminary</p></div>
+            </div>
+          </div>
+          <div class="bg-bg dark:bg-bg-dark rounded-xl p-8 border border-line dark:border-line-dark">
+            <div class="flex gap-1 mb-4">
+              <svg class="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg class="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p class="text-muted dark:text-muted-dark text-sm leading-relaxed mb-6">"Setup took 15 minutes. We had actionable insights within the hour. The onboarding experience is the best I've seen in any B2B product."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-900/50 flex items-center justify-center text-sm font-semibold text-emerald-700 dark:text-emerald-400">AL</div>
+              <div><p class="text-sm font-medium text-ink dark:text-ink-dark">Ava Lin</p><p class="text-xs text-muted dark:text-muted-dark">Head of Product, Canopy</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-24 lg:py-32">
+      <div class="max-w-3xl mx-auto px-6">
+        <div class="text-center mb-16 fade-in">
+          <p class="text-brand dark:text-brand-dark text-sm font-semibold tracking-wide uppercase mb-3">FAQ</p>
+          <h2 class="font-heading text-3xl lg:text-4xl font-bold text-ink dark:text-ink-dark">Common questions</h2>
+        </div>
+        <div class="space-y-4 fade-in">
+          <details class="group border border-line dark:border-line-dark rounded-xl">
+            <summary class="flex items-center justify-between p-6 cursor-pointer text-ink dark:text-ink-dark font-medium text-sm">
+              How does the free trial work?
+              <svg class="w-5 h-5 text-muted dark:text-muted-dark group-open:rotate-45 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </summary>
+            <p class="px-6 pb-6 text-sm text-muted dark:text-muted-dark leading-relaxed">Start with a 14-day free trial of Pro — no credit card required. You get full access to all features. At the end, choose a plan or stay on Starter for free.</p>
+          </details>
+          <details class="group border border-line dark:border-line-dark rounded-xl">
+            <summary class="flex items-center justify-between p-6 cursor-pointer text-ink dark:text-ink-dark font-medium text-sm">
+              Can I change plans later?
+              <svg class="w-5 h-5 text-muted dark:text-muted-dark group-open:rotate-45 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </summary>
+            <p class="px-6 pb-6 text-sm text-muted dark:text-muted-dark leading-relaxed">Absolutely. Upgrade, downgrade, or cancel anytime from your billing settings. Changes take effect immediately with prorated billing.</p>
+          </details>
+          <details class="group border border-line dark:border-line-dark rounded-xl">
+            <summary class="flex items-center justify-between p-6 cursor-pointer text-ink dark:text-ink-dark font-medium text-sm">
+              What integrations do you support?
+              <svg class="w-5 h-5 text-muted dark:text-muted-dark group-open:rotate-45 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </summary>
+            <p class="px-6 pb-6 text-sm text-muted dark:text-muted-dark leading-relaxed">We integrate with 200+ tools including Slack, GitHub, Jira, Linear, Notion, and all major cloud providers. Plus our API lets you build custom integrations.</p>
+          </details>
+          <details class="group border border-line dark:border-line-dark rounded-xl">
+            <summary class="flex items-center justify-between p-6 cursor-pointer text-ink dark:text-ink-dark font-medium text-sm">
+              Is my data secure?
+              <svg class="w-5 h-5 text-muted dark:text-muted-dark group-open:rotate-45 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </summary>
+            <p class="px-6 pb-6 text-sm text-muted dark:text-muted-dark leading-relaxed">Yes. We're SOC 2 Type II certified with end-to-end encryption. Data is stored in your preferred region with full GDPR compliance.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-24 lg:py-32 gradient-hero text-white text-center relative overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.04]" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2260%22 height=%2260%22><line x1=%220%22 y1=%2260%22 x2=%2260%22 y2=%2260%22 stroke=%22white%22 stroke-width=%220.5%22/><line x1=%2260%22 y1=%220%22 x2=%2260%22 y2=%2260%22 stroke=%22white%22 stroke-width=%220.5%22/></svg>');"></div>
+      <div class="max-w-3xl mx-auto px-6 relative">
+        <h2 class="font-heading text-3xl lg:text-5xl font-bold mb-6">Ready to launch?</h2>
+        <p class="text-lg text-indigo-100/70 mb-10 max-w-xl mx-auto">Join 10,000+ teams already using Launchpad to build better products, faster.</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#" class="w-full sm:w-auto text-sm font-medium text-brand-hover bg-white hover:bg-gray-50 px-8 py-3.5 rounded-lg transition-colors">Start Free Trial</a>
+          <a href="#" class="w-full sm:w-auto text-sm font-medium text-white border border-white/20 hover:bg-white/10 px-8 py-3.5 rounded-lg transition-colors">Talk to Sales</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-bg-dark text-gray-400 py-16 border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div>
+          <a href="#" class="font-heading font-bold text-lg text-white flex items-center gap-2 mb-4">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="6" fill="#4f46e5"/><path d="M7 17V7l5 10L17 7v10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Launchpad
+          </a>
+          <p class="text-sm leading-relaxed">The all-in-one platform for modern teams.</p>
+        </div>
+        <div>
+          <p class="text-sm font-medium text-white mb-4">Product</p>
+          <ul class="space-y-2.5 text-sm"><li><a href="#" class="hover:text-white transition-colors">Features</a></li><li><a href="#" class="hover:text-white transition-colors">Pricing</a></li><li><a href="#" class="hover:text-white transition-colors">Changelog</a></li><li><a href="#" class="hover:text-white transition-colors">Docs</a></li></ul>
+        </div>
+        <div>
+          <p class="text-sm font-medium text-white mb-4">Company</p>
+          <ul class="space-y-2.5 text-sm"><li><a href="#" class="hover:text-white transition-colors">About</a></li><li><a href="#" class="hover:text-white transition-colors">Blog</a></li><li><a href="#" class="hover:text-white transition-colors">Careers</a></li><li><a href="#" class="hover:text-white transition-colors">Contact</a></li></ul>
+        </div>
+        <div>
+          <p class="text-sm font-medium text-white mb-4">Legal</p>
+          <ul class="space-y-2.5 text-sm"><li><a href="#" class="hover:text-white transition-colors">Privacy</a></li><li><a href="#" class="hover:text-white transition-colors">Terms</a></li><li><a href="#" class="hover:text-white transition-colors">Security</a></li></ul>
+        </div>
+      </div>
+      <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
+        <p>&copy; 2025 Launchpad, Inc. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-white transition-colors">Twitter</a>
+          <a href="#" class="hover:text-white transition-colors">GitHub</a>
+          <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Theme toggle
+    const THEME_KEY = 'launchpad-theme';
+    function getTheme() {
+      const stored = localStorage.getItem(THEME_KEY);
+      if (stored) return stored;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    function setTheme(t) {
+      if (t === 'dark') document.documentElement.classList.add('dark');
+      else document.documentElement.classList.remove('dark');
+      localStorage.setItem(THEME_KEY, t);
+    }
+    setTheme(getTheme());
+    document.querySelectorAll('.theme-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        setTheme(document.documentElement.classList.contains('dark') ? 'light' : 'dark');
+      });
+    });
+
+    // Fade-in observer
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Mobile menu
+    const toggle = document.getElementById('menuToggle');
+    const menu = document.getElementById('mobileMenu');
+    toggle.addEventListener('click', () => menu.classList.toggle('hidden'));
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+  </script>
+</body>
+</html>

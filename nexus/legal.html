@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy & Terms — Nexus</title>
+  <meta name="description" content="Privacy policy and terms of service for Nexus.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --font-heading: 'General Sans', 'Inter', system-ui, -apple-system, sans-serif;
+      --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+      --color-bg: #FAFAF8;
+      --color-bg-dark: #0A0A0A;
+      --color-surface: #F0F0EE;
+      --color-surface-dark: #141414;
+      --color-ink: #1A1A1A;
+      --color-ink-dark: #FAFAFA;
+      --color-muted: #6B6B6E;
+      --color-muted-dark: #8B8B8E;
+      --color-dim: #9A9A9D;
+      --color-dim-dark: #5A5A5D;
+      --color-accent: #7C3AED;
+      --color-border: oklch(0 0 0 / 0.06);
+      --color-border-dark: oklch(1 0 0 / 0.06);
+      --color-border-hover: oklch(0 0 0 / 0.12);
+      --color-border-hover-dark: oklch(1 0 0 / 0.12);
+      --color-nav-bg: oklch(0.98 0 0 / 0.7);
+      --color-nav-bg-dark: oklch(0.06 0 0 / 0.7);
+      --font-size-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --font-size-xl: clamp(1.25rem, 1rem + 1.25vw, 1.75rem);
+      --font-size-2xl: clamp(1.5rem, 1rem + 2.5vw, 2.5rem);
+      --font-size-3xl: clamp(2rem, 1rem + 4vw, 3.75rem);
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    @variant dark (&:where(.dark, .dark *));
+  </style>
+  <script src="js/main.js"></script>
+</head>
+<body class="font-body text-base leading-[1.65] tracking-[-0.01em] text-ink dark:text-ink-dark bg-bg dark:bg-bg-dark antialiased">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 inset-x-0 z-[100] h-16 flex items-center bg-nav-bg dark:bg-nav-bg-dark backdrop-blur-[16px] backdrop-saturate-[180%] border-b border-border dark:border-border-dark transition-colors duration-300" role="navigation" aria-label="Main navigation">
+    <div class="flex items-center justify-between w-full max-w-[1400px] mx-auto px-[clamp(1rem,5vw,3rem)]">
+      <a href="index.html" class="font-heading text-[1.25rem] font-bold tracking-[-0.03em] flex items-center gap-2" aria-label="Nexus home">
+        <svg class="w-7 h-7" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="6" fill="currentColor" fill-opacity="0.1"/><path d="M8 20V8l6 12L20 8v12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Nexus
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html#features" class="text-sm text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors duration-200">Features</a>
+        <a href="index.html#pricing" class="text-sm text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors duration-200">Pricing</a>
+        <a href="changelog.html" class="text-sm text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors duration-200">Changelog</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <button class="theme-toggle w-9 h-9 flex items-center justify-center rounded-[0.75rem] border border-border dark:border-border-dark hover:border-border-hover dark:hover:border-border-hover-dark transition-colors duration-200 cursor-pointer" aria-label="Toggle theme">
+          <svg class="icon-moon w-[18px] h-[18px] hidden dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun w-[18px] h-[18px] block dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="nav-hamburger flex md:hidden items-center justify-center w-10 h-10 cursor-pointer" aria-label="Toggle menu" aria-expanded="false">
+          <span class="block w-5 h-0.5 bg-ink dark:bg-ink-dark relative transition-colors duration-200"></span>
+        </button>
+      </div>
+    </div>
+    <div class="nav-mobile fixed top-16 inset-x-0 bottom-0 bg-bg dark:bg-bg-dark p-8 flex flex-col gap-6 -translate-y-full opacity-0 pointer-events-none transition-all duration-[400ms] ease-[var(--ease-out)] z-[99] [&.open]:translate-y-0 [&.open]:opacity-100 [&.open]:pointer-events-auto">
+      <a href="index.html#features" class="text-2xl font-heading font-semibold">Features</a>
+      <a href="index.html#pricing" class="text-2xl font-heading font-semibold">Pricing</a>
+      <a href="changelog.html" class="text-2xl font-heading font-semibold">Changelog</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="pt-[calc(4rem+4rem)] pb-12 text-center">
+      <div class="w-full max-w-[1200px] mx-auto px-[clamp(1rem,5vw,3rem)]">
+        <h1 class="font-heading text-3xl font-semibold leading-[1.1] tracking-[-0.03em] reveal">Privacy &amp; Terms</h1>
+        <p class="text-muted dark:text-muted-dark mt-4 reveal">Last updated: February 1, 2026</p>
+      </div>
+    </div>
+
+    <section class="pb-[clamp(4rem,8vw,10rem)]">
+      <div class="w-full max-w-[1200px] mx-auto px-[clamp(1rem,5vw,3rem)]">
+        <div class="legal-content max-w-[720px] mx-auto">
+
+          <h2 id="privacy" class="font-heading text-2xl font-semibold tracking-[-0.03em] leading-[1.1] mt-12 mb-4">Privacy Policy</h2>
+          <p class="text-muted dark:text-muted-dark mb-4 leading-[1.7]">Your privacy is important to us. This Privacy Policy explains how Nexus ("we", "us", "our") collects, uses, and protects your information when you use our platform.</p>
+
+          <h3 class="font-heading text-xl font-semibold tracking-[-0.03em] leading-[1.1] mt-8 mb-3">Information We Collect</h3>
+          <p class="text-muted dark:text-muted-dark mb-4 leading-[1.7]">We collect information you provide directly, such as when you create an account, connect data sources, or contact support. This may include:</p>
+          <ul class="text-muted dark:text-muted-dark">
+            <li>Name and email address</li>
+            <li>Company name and role</li>
+            <li>Payment information (processed securely via Stripe)</li>
+            <li>Usage data and analytics queries</li>
+          </ul>
+
+          <h3 class="font-heading text-xl font-semibold tracking-[-0.03em] leading-[1.1] mt-8 mb-3">How We Use Your Information</h3>
+          <p class="text-muted dark:text-muted-dark mb-4 leading-[1.7]">We use your information to provide and improve our services, process transactions, communicate with you about updates and features, and ensure the security of our platform.</p>
+
+          <h3 class="font-heading text-xl font-semibold tracking-[-0.03em] leading-[1.1] mt-8 mb-3">Data Security</h3>
+          <p class="text-muted dark:text-muted-dark mb-4 leading-[1.7]">We implement industry-standard security measures including encryption at rest and in transit, regular security audits, and SOC 2 Type II compliance. We never sell your data to third parties.</p>
+
+          <h3 class="font-heading text-xl font-semibold tracking-[-0.03em] leading-[1.1] mt-8 mb-3">Your Rights</h3>
+          <p class="text-muted dark:text-muted-dark mb-4 leading-[1.7]">You have the right to access, correct, or delete your personal data. You may also request a copy of your data or restrict processing. Contact privacy@nexus.app to exercise these rights.</p>
+
+          <h3 class="font-heading text-xl font-semibold tracking-[-0.03em] leading-[1.1] mt-8 mb-3">Cookies</h3>
+          <p class="text-muted dark:text-muted-dark mb-4 leading-[1.7]">We use essential cookies for authentication and preferences. Analytics cookies are optional and can be disabled through your browser settings or our cookie consent banner.</p>
+
+          <hr class="border-t border-border dark:border-border-dark my-16">
+
+          <h2 id="terms" class="font-heading text-2xl font-semibold tracking-[-0.03em] leading-[1.1] mt-12 mb-4">Terms of Service</h2>
+          <p class="text-muted dark:text-muted-dark mb-4 leading-[1.7]">By using Nexus, you agree to these Terms of Service. Please read them carefully.</p>
+
+          <h3 class="font-heading text-xl font-semibold tracking-[-0.03em] leading-[1.1] mt-8 mb-3">Account Terms</h3>
+          <p class="text-muted dark:text-muted-dark mb-4 leading-[1.7]">You must be 18 years or older to use this service. You are responsible for maintaining the security of your account and password. Nexus cannot and will not be liable for any loss or damage from your failure to comply with this security obligation.</p>
+
+          <h3 class="font-heading text-xl font-semibold tracking-[-0.03em] leading-[1.1] mt-8 mb-3">Acceptable Use</h3>
+          <p class="text-muted dark:text-muted-dark mb-4 leading-[1.7]">You agree not to use Nexus to violate any laws, infringe on intellectual property rights, transmit malicious code, or attempt to gain unauthorized access to our systems or other users' data.</p>
+
+          <h3 class="font-heading text-xl font-semibold tracking-[-0.03em] leading-[1.1] mt-8 mb-3">Payment Terms</h3>
+          <p class="text-muted dark:text-muted-dark mb-4 leading-[1.7]">Paid plans are billed monthly or annually as selected. Prices are subject to change with 30 days' notice. Refunds are handled on a case-by-case basis within the first 14 days.</p>
+
+          <h3 class="font-heading text-xl font-semibold tracking-[-0.03em] leading-[1.1] mt-8 mb-3">Service Availability</h3>
+          <p class="text-muted dark:text-muted-dark mb-4 leading-[1.7]">We strive for 99.9% uptime (99.99% for Enterprise plans). Scheduled maintenance windows will be communicated at least 48 hours in advance.</p>
+
+          <h3 class="font-heading text-xl font-semibold tracking-[-0.03em] leading-[1.1] mt-8 mb-3">Termination</h3>
+          <p class="text-muted dark:text-muted-dark mb-4 leading-[1.7]">You may cancel your account at any time. Upon cancellation, your data will be retained for 30 days before permanent deletion. You may request immediate deletion by contacting support.</p>
+
+          <h3 class="font-heading text-xl font-semibold tracking-[-0.03em] leading-[1.1] mt-8 mb-3">Contact</h3>
+          <p class="text-muted dark:text-muted-dark mb-4 leading-[1.7]">Questions about these terms? Reach out at legal@nexus.app or write to us at:<br>Nexus Inc., 123 Innovation Drive, San Francisco, CA 94105</p>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-border dark:border-border-dark pt-8 pb-8">
+    <div class="w-full max-w-[1200px] mx-auto px-[clamp(1rem,5vw,3rem)]">
+      <div class="flex items-center justify-between flex-wrap gap-4">
+        <p class="text-xs text-dim dark:text-dim-dark">© 2026 Nexus. All rights reserved.</p>
+        <div class="flex gap-4">
+          <a href="index.html" class="text-sm text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors duration-200">Home</a>
+          <a href="changelog.html" class="text-sm text-muted dark:text-muted-dark hover:text-ink dark:hover:text-ink-dark transition-colors duration-200">Changelog</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

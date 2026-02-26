@@ -1,0 +1,56 @@
+/* ============================================
+   Groundwork — Tailwind v4 Template
+   Custom styles (pseudo-elements, complex selectors)
+   ============================================ */
+
+/* ---------- Fonts ---------- */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Inter:wght@400;500;600&display=swap');
+
+/* ---------- Base ---------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+::selection {
+  background: #E67E22;
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid #E67E22;
+  outline-offset: 2px;
+}
+
+/* ---------- Hamburger Lines ---------- */
+.hamburger span::before,
+.hamburger span::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  left: 0;
+  border-radius: 2px;
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hamburger span::before { transform: translateY(-7px); }
+.hamburger span::after { transform: translateY(7px); }
+.hamburger.active span { background: transparent !important; }
+.hamburger.active span::before { transform: rotate(45deg); }
+.hamburger.active span::after { transform: rotate(-45deg); }
+
+/* ---------- Before/After Labels ---------- */
+.ba-label {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
